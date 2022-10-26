@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><nav><a href=/>Home</a>
+<a href=/about>About</a>
+<a href=/projects>Projects</a>
+<a href=/cv>CV</a>
+<a href=/contact>Contact</a></nav><main><section class=notes><h1>Python</h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=line><span class=cl><span class=c1># This is to count the number of lines of text files</span>
+</span></span><span class=line><span class=cl><span class=c1># in a named folder.</span>
+</span></span><span class=line><span class=cl><span class=c1># The following extension qualify a file to be counted:</span>
+</span></span><span class=line><span class=cl><span class=c1># tab, txt, csv, py</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>os</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>file_len</span><span class=p>(</span><span class=n>fname</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>i</span><span class=o>=-</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=n>fname</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span><span class=p>,</span> <span class=n>l</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>f</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>pass</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>allowed</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;.tab&#39;</span><span class=p>,</span> <span class=s1>&#39;.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;.csv&#39;</span><span class=p>,</span> <span class=s1>&#39;.py&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#    this is where you name the folder you want to search</span>
+</span></span><span class=line><span class=cl><span class=n>folderName</span> <span class=o>=</span> <span class=s1>&#39;Z:</span><span class=se>\\</span><span class=s1>Documents</span><span class=se>\\</span><span class=s1>Python&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>os</span><span class=o>.</span><span class=n>chdir</span><span class=p>(</span><span class=n>folderName</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>filename</span> <span class=ow>in</span> <span class=n>os</span><span class=o>.</span><span class=n>listdir</span><span class=p>(</span><span class=n>folderName</span><span class=p>):</span>    
+</span></span><span class=line><span class=cl>    <span class=n>filenameOnly</span><span class=p>,</span> <span class=n>ext</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>path</span><span class=o>.</span><span class=n>splitext</span><span class=p>(</span><span class=n>filename</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>ext</span> <span class=ow>in</span> <span class=n>allowed</span><span class=p>:</span> 
+</span></span><span class=line><span class=cl>        <span class=nb>print</span> <span class=n>filename</span> <span class=o>+</span> <span class=s1>&#39; | &#39;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>file_len</span><span class=p>(</span><span class=n>filename</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># report finished    </span>
+</span></span><span class=line><span class=cl><span class=c1># count the number newlines with quotes;</span>
+</span></span></code></pre></div></section></main><footer><small>Copyright 2022 Me.</small></footer></div></body></html>

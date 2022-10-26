@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><nav><a href=/>Home</a>
+<a href=/about>About</a>
+<a href=/projects>Projects</a>
+<a href=/cv>CV</a>
+<a href=/contact>Contact</a></nav><main><section class=notes><h1>Python_pc_setup_IV</h1><h2 id=install-the-python-binary-you-want-to-work-with>Install the Python binary you want to work with</h2><p>In my case Python 2 is installed here:</p><pre tabindex=0><code>c:\Python27\
+</code></pre><p>Check virtual env is installed</p><pre tabindex=0><code>c:\Python27\python -m pip install virtualenv
+</code></pre><p>Create a virtual environvent</p><pre tabindex=0><code>c:\Python27\python -m virtualenv d:\fast\mypy\genpy27
+</code></pre><p>Activate the environment</p><pre tabindex=0><code>D:\fast\mypy\genpy27\Scripts\activate.ps1
+</code></pre><h2 id=check-pip-is-up-to-date>Check pip is up-to-date</h2><pre tabindex=0><code>pip install --upgrade pip
+</code></pre><h2 id=install-numpy-from-wheel-including-mkl-mdash-to-match-the-python-version>Install numpy from wheel including mkl — to match the Python version</h2><p>Download relevant wheel:</p><pre tabindex=0><code>set-location C:\Users\David Lewis\Downloads
+</code></pre><pre tabindex=0><code>pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl
+</code></pre><h2 id=install-scipy-from-wheel-mdash-to-match-the-python-version>Install scipy from wheel — to match the Python version:</h2><pre tabindex=0><code>pip install scipy-1.0.0-cp27-cp27m-win_amd64.whl
+</code></pre><h2 id=install-jupyter>Install jupyter</h2><pre tabindex=0><code>pip install jupyter
+</code></pre><h2 id=install-pandas-and-its-dependencies>Install pandas and it&rsquo;s dependencies</h2><pre tabindex=0><code>pip install pandas
+</code></pre><h2 id=install-matplotlib>Install matplotlib:</h2><pre tabindex=0><code>pip install matplotlib
+</code></pre><h2 id=install-nose>Install nose:</h2><pre tabindex=0><code>pip install nose
+</code></pre><h2 id=install-pytest>Install pytest</h2><pre tabindex=0><code>pip install -U pytest
+</code></pre><pre tabindex=0><code>pytest --version
+</code></pre></section></main><footer><small>Copyright 2022 Me.</small></footer></div></body></html>
