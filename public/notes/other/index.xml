@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeeKayBee</title>
+    <link>http://example.org/notes/other/</link>
+    <description>Recent content on DeeKayBee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Wed, 19 Oct 2022 11:03:04 +0100</lastBuildDate><atom:link href="http://example.org/notes/other/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://example.org/notes/other/basics/pythonxasasdas/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>http://example.org/notes/other/basics/pythonxasasdas/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+  </channel>
+</rss>

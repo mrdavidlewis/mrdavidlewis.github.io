@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+  <!-- This gets (content/_index.md) -->
+  {{ .Content }} 
+  <!-- -->
+
+  <section class="notice-area" style="padding-bottom:20px">
+  <h1>Latest note</h1>
+
+  {{range first 1 (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse}}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ end }}
+
+  </section>
+
+  <section class="top-level-area">
+    <h1>Notes</h1>
+  </section>
+
+  {{ $category := "xxx" }}
+  {{ $sub_category := "yyy" }}
+
+  {{ $categories_diff := "_ _ _" }}
+  {{ $sub_cats_diff := "N N N" }}
+
+  {{ range sort (where .Site.RegularPages "Section" "eq" "notes") "File.Path" }}
+    
+    <!-- change the path to same separator whatever OS-->
+    {{ $x := .File.Dir }}
+    
+    {{ $x = replace $x "\\" "," }}
+    {{ $x = replace $x "/" "," }}
+    
+    {{ $x = split $x "," }}
+
+    {{ $this_category := index $x 1 }}
+    {{ $this_sub_category := index $x 2 }}
+    
+    <!-- A counter -->
+    {{ $i := 0}}
+  
+    <!--printing
+    Currently:<br>
+    $this_category = {{ $this_category }}
+    <br>
+    $this_sub_category = {{ $this_sub_category }}
+    <br>
+    <br>
+    Old:<br>
+    $category = {{ $category }}
+    <br>
+    $sub_category = {{ $sub_category }}
+    -->
+
+    {{ $categories_diff = ne $category $this_category }}
+    {{ $sub_cats_diff = ne $sub_category $this_sub_category }}
+
+ 
+
+    <!-- If a new Category alltogether -->
+    {{ if $categories_diff }}
+      {{ if ge $i 0 }}
+        </ul> 
+        </section>
+      {{ end }}
+
+      <section class="topic">
+        <h2>{{ humanize $this_category }}</h2>
+      </section>
+
+      <section class="sub-section">
+        <h3>{{ humanize $this_sub_category }}</h3>
+      </section>
+
+      <section class="sub-sub-section">
+        <ul>
+
+    {{ end }}
+
+    <!-- If a new sub-section -->
+    {{ if and (not ($categories_diff)) ($sub_cats_diff) }} 
+
+      {{ if ge $i 0 }}
+        </ul>
+        </section>
+      {{ end }}
+
+      <section class="sub-section">
+        <h3>{{ humanize $this_sub_category }}</h3>
+      </section>
+
+      <section class="sub-sub-section">
+        <ul>
+
+    {{ end }}
+
+
+    {{ $i = add $i 1}} 
+    {{ $category = $this_category }}
+    {{ $sub_category = $this_sub_category }}
+
+
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a> || {{ .File.Dir }}
+    </li>
+
+
+  {{ end }}
+
+
+
+
+<!--
+  <section class="top-level-area">
+    <h1>Code</h1>
+  </section>
+
+  <section class="topic">
+    <h2>Python</h2>
+  </section>
+
+  <section class="sub-section">
+    <h3>Basics</h3>
+  </section>
+
+  <section class="sub-sub-section">
+    <ul>
+      {{ $pages := .Pages }}
+      {{ if .IsHome }}
+        {{ $pages = .Site.RegularPages }}
+      {{ end }}
+
+      {{ $temp := "" }}
+      {{ range $pages }}
+        {{  $temp = .File.Dir }}
+        {{  $temp = replace $temp "\\" "" }}
+        {{  $temp = replace $temp "/" "" }}
+        {{ if eq $temp "notespythonbasics" }}
+            <li>
+              <a href="{{ .Permalink }}"> {{ .Title }} 
+              </a>
+            </li>
+        {{ end }} 
+      {{ end }}
+    </ul>
+  </section>
+
+-->
+{{ end }}
+

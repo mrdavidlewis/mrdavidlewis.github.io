@@ -1,0 +1,6 @@
+baseURL = 'https://mrdavidlewis.github.io/'
+languageCode = 'en-uk'
+title = 'DeeKayBee'
+theme = "basic"
+pygmentsUseClasses = true
+
