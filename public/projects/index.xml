@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on DeeKayBee</title>
-    <link>http://example.org/projects/</link>
+    <link>https://mrdavidlewis.github.io/projects/</link>
     <description>Recent content in Projects on DeeKayBee</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language><atom:link href="http://example.org/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-uk</language><atom:link href="https://mrdavidlewis.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Awesomeco</title>
-      <link>http://example.org/projects/awesomeco/</link>
+      <link>https://mrdavidlewis.github.io/projects/awesomeco/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/awesomeco/</guid>
+      <guid>https://mrdavidlewis.github.io/projects/awesomeco/</guid>
       <description>
 Description&amp;hellip;
 Tech used item item item </description>
@@ -19,10 +19,10 @@ Tech used item item item </description>
     
     <item>
       <title>Jabberworcky</title>
-      <link>http://example.org/projects/jabberworcky/</link>
+      <link>https://mrdavidlewis.github.io/projects/jabberworcky/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/jabberworcky/</guid>
+      <guid>https://mrdavidlewis.github.io/projects/jabberworcky/</guid>
       <description>
 Description&amp;hellip;
 Tech used item item item </description>
