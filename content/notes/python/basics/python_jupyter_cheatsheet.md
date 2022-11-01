@@ -1,5 +1,5 @@
 ---
-title: "Python_jupyter_cheatsheet"
+title: "Python Jupyter Cheatsheet"
 date: 2022-10-19T11:04:48+01:00
 draft: false
 ---

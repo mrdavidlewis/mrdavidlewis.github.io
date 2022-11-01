@@ -3,13 +3,16 @@
   <!-- This gets (content/_index.md) -->
   {{ .Content }} 
   <!-- -->
-
+ 
   <section class="notice-area" style="padding-bottom:20px">
-  <h1>Latest note</h1>
+  <h1>Latest notes</h1>
+  <div class="latest-holder">
+    {{range first 3 (where .Site.RegularPages "Type" "in" "notes").ByDate.Reverse}}
 
-  {{range first 1 (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse}}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  {{ end }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+    {{ end }}
+  </div>
 
   </section>
 
@@ -101,7 +104,7 @@
 
 
     <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a> || {{ .File.Dir }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
     </li>
 
 

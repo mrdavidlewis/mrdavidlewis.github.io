@@ -1,5 +1,5 @@
 ---
-title: "Python_basic_arithmetic"
+title: "Python Basic Arithmetic"
 date: 2022-10-19T11:03:52+01:00
 draft: false
 ---

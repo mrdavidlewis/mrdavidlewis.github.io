@@ -1,10 +1,10 @@
 ---
-title: "Python_get_arguments"
+title: "Python Get Arguments"
 date: 2022-10-19T11:04:21+01:00
 draft: false
 ---
 
-# Get the arguments from the comand line
+## Get the arguments from the comand line
 
 ```Python
 from sys import argv

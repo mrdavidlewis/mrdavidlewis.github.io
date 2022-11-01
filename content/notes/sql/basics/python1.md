@@ -1,5 +1,5 @@
 ---
-title: "Python1"
+title: "Python in SQL Basics a bit longer than average title"
 date: 2022-10-19T11:05:53+01:00
 draft: false
 ---

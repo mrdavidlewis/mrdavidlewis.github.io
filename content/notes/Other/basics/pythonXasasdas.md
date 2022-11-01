@@ -1,5 +1,5 @@
 ---
-title: "Python"
+title: "Python a slightly longer title"
 date: 2022-10-19T11:03:04+01:00
 draft: false
 ---

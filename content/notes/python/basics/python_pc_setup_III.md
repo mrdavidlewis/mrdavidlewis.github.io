@@ -1,5 +1,5 @@
 ---
-title: "Python_pc_setup_III"
+title: "Python PC Setup III"
 date: 2022-10-19T11:05:30+01:00
 draft: false
 ---
