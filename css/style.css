@@ -1,14 +1,12 @@
 :root {
-  --main-h1-underline: rgb(165, 42, 42, 100%);
+  --deep-red: rgb(165, 42, 42, 100%);
+  --very-deep-red: rgb(109, 30, 30);
   --left-index-padding: 5px;
 }  
-
-
 
 h1, h2, h3, h4 {
   font-family: 'Times New Roman', Times, serif;
 }
-
 
 
 h1.site-title {
@@ -20,7 +18,7 @@ h1.site-title {
 .container {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
 }
 
 nav, footer {
@@ -56,8 +54,9 @@ nav > a {
 .top-level-area h1 {
   font-size: 3rem;
   font-weight: 400;
-  border-bottom: 7px solid var(--main-h1-underline);
+  border-bottom: 7px solid var(--deep-red);
   padding-left: var(--left-index-padding);
+  padding-bottom: 0rem;
 }
 
 .topic {
@@ -68,7 +67,7 @@ nav > a {
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: .03rem;
-  border-bottom: 3px solid var(--main-h1-underline);
+  border-bottom: 3px solid var(--deep-red);
   padding-left: var(--left-index-padding);
 }
 
@@ -84,7 +83,6 @@ nav > a {
 
 .sub-sub-section {
   border: 4px solid rgb(231, 231, 231);
-  column-count: 2;
   padding: 1em;
   margin-bottom: 1rem;
   border-radius: .2rem;
@@ -116,15 +114,51 @@ nav > a {
 .notice-area {
   margin-top: 2rem;
   padding-left: 1rem;
+  margin-right: 0px;
   border: 1px dashed rgb(155, 155, 155);
   margin-bottom: 1rem;
   border-radius: 0.2rem;
 }
 
 .notice-area h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 400;
+  letter-spacing: .03rem;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
 }
+
+.latest-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-holder a {
+  margin-right: 1rem;
+  background-color: rgb(154, 154, 154);
+  padding: 2rem;
+  border: 1px solid rgb(142, 142, 142);
+  border-radius: 2px;
+  color: black;
+  transition: background-color 0.7s ease;
+  letter-spacing: .02rem;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  
+
+} 
+
+.latest-holder a:hover {
+  transition: background-color 0.6s ease;
+  background-color: var(--deep-red);
+  border: 1px solid var(--very-deep-red);
+  color: white;
+
+}
+
+
 
 /*      :not(.highlight pre )              */
 code:not([class]) {
@@ -160,10 +194,33 @@ code:not([class]) {
 
 
 
-@media only screen and (min-width: 768px) {
 
-  nav { flex-direction: row;
+@media only screen and (min-width: 821px)  {
+
+  .container {
+    width: 70%;
+    max-width: 1000px;
+  }
+
+  nav {
+    flex-direction: row;
    }
+
+   .latest-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+  }
+
+  .latest-holder a {
+    width: 33%;
+    margin-right: 1rem;
+
+
+  }
+
+
 
   .project-container {
     display: flex;
@@ -177,7 +234,8 @@ code:not([class]) {
     flex: 1;
   }
 
+  .sub-sub-section {
+    column-count: 2;
+  }
+
 }
-
-
-
