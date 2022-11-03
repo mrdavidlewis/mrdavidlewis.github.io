@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><nav><a href=/>Home</a>
+<a href=/projects>Projects</a>
+<a href=/about>About</a></nav><main><section class=notes><h1>Visualise a set of colours</h1><p>See an example:</p><p><a href=/examples/show_colours.html>Below implemented</a></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span> <span class=na>lang</span><span class=o>=</span><span class=s>&#34;en&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>charset</span><span class=o>=</span><span class=s>&#34;UTF-8&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>http-equiv</span><span class=o>=</span><span class=s>&#34;X-UA-Compatible&#34;</span> <span class=na>content</span><span class=o>=</span><span class=s>&#34;IE=edge&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;viewport&#34;</span> <span class=na>content</span><span class=o>=</span><span class=s>&#34;width=device-width, initial-scale=1.0&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>title</span><span class=p>&gt;</span>IVP Colours<span class=p>&lt;/</span><span class=nt>title</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>style</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>#</span><span class=nn>main-container</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>display</span><span class=p>:</span> <span class=kc>flex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>flex-direction</span><span class=p>:</span> <span class=kc>row</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>flex-wrap</span><span class=p>:</span> <span class=kc>wrap</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nc>colour-item</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>margin</span><span class=p>:</span> <span class=mi>1</span><span class=kt>rem</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>padding</span><span class=p>:</span> <span class=mi>1</span><span class=kt>rem</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>width</span><span class=p>:</span> <span class=mi>10</span><span class=kt>rem</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>text-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>margin-right</span><span class=p>:</span> <span class=mi>1</span><span class=kt>rem</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>border</span><span class=p>:</span> <span class=mi>0</span><span class=kt>px</span> <span class=kc>solid</span> <span class=kc>khaki</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>border-radius</span><span class=p>:</span> <span class=mf>.5</span><span class=kt>rem</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>style</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span>IVP Colours<span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;main-container&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>write_colours</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>mycolors</span> <span class=o>=</span> <span class=p>[[</span><span class=s1>&#39;rgb(180,180,180)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(199,51,100)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(199,51,54)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(247,137,42)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(251,104,39)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(103,106,204)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(147,204,224)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span> <span class=s1>&#39;rgb(121,184,255)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(229, 240, 224)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(61, 56, 56)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(84, 144, 136)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(0, 100, 0, .2)&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;#547575&#39;</span><span class=p>,</span> <span class=s1>&#39;slider&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(150,150,150)&#39;</span><span class=p>,</span> <span class=s1>&#39;slider pip&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;#ffed00&#39;</span><span class=p>,</span> <span class=s1>&#39;pip-active:&#39;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=p>[</span><span class=s1>&#39;rgb(230,230,230&#39;</span><span class=p>,</span> <span class=s1>&#39;env colour&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>          <span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>mainContainerElement</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s2>&#34;#main-container&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>mycolors</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=kd>let</span> <span class=nx>temp</span> <span class=o>=</span> <span class=nx>mainContainerElement</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;div&#39;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>      <span class=nx>temp</span><span class=p>.</span><span class=nx>setAttribute</span><span class=p>(</span><span class=s1>&#39;class&#39;</span><span class=p>,</span> <span class=s1>&#39;colour-item&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nx>temp</span><span class=p>.</span><span class=nx>style</span><span class=p>.</span><span class=nx>background</span> <span class=o>=</span> <span class=nx>mycolors</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=mi>0</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>mycolors</span><span class=p>[</span><span class=nx>i</span><span class=p>])){</span>
+</span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nx>colorName</span> <span class=o>=</span> <span class=nx>temp</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;p&#39;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>        <span class=nx>colorName</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>mycolors</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=mi>0</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>mycolors</span><span class=p>[</span><span class=nx>i</span><span class=p>].</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=kd>let</span> <span class=nx>colorDescription</span> <span class=o>=</span> <span class=nx>temp</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;p&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>          <span class=nx>colorDescription</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>mycolors</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>write_colours</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></div></section></main><footer><small>Copyright 2022</small></footer><script src=dkb.js></script></div></body></html>
