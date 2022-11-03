@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DeeKayBee</title><link>https://mrdavidlewis.github.io/notes/hugo/</link><description>Recent content on DeeKayBee</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><lastBuildDate>Wed, 02 Nov 2022 15:37:15 +0000</lastBuildDate><atom:link href="https://mrdavidlewis.github.io/notes/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Build site</title><link>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</link><pubDate>Wed, 02 Nov 2022 15:37:15 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</guid><description>Prior to deploying a site you need to build it.
+This process places the site which needs to be deployed in public.
+Publish site to public:
+hugo Remove public:
+rm -r public Clean up using Hugo. By default hugo leaves content in public that is not longer in content. This command cleans up those orphans:
+hugo --cleanDestinationDir Remove and publish:
+rm -r public &amp;amp;&amp;amp; hugo Publish and minimise:
+hugo --cleanDestinationDir --minify</description></item><item><title>Add a new note</title><link>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</link><pubDate>Wed, 02 Nov 2022 14:10:20 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</guid><description>hugo new notes/hugo/add_post.md</description></item></channel></rss>

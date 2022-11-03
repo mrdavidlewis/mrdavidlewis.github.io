@@ -1,10 +1,10 @@
 ---
-title: "Awesomeco"
+title: "Test project page 2"
 draft: false
 ---
 
 ![alt](//via.placeholder.com/640x150)
-  
+
 Description...
   
 ### Tech used
