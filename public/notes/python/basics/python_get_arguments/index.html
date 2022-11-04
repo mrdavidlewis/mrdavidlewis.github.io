@@ -1,9 +1,74 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><div id=topmenu><ul><li><a href=/>Home</a></li><li><a href=/projects>Projects</a></li><li><a href=/about>About</a></li></ul></div><main><section class=notes><h1>Python Get Arguments</h1><h2 id=get-the-arguments-from-the-comand-line>Get the arguments from the comand line</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sys</span> <span class=kn>import</span> <span class=n>argv</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>thefile</span><span class=p>,</span> <span class=n>first_arg</span><span class=p>,</span> <span class=n>second_arg</span><span class=p>,</span> <span class=n>third_arg</span> <span class=o>=</span> <span class=n>argv</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nb>print</span> <span class=p>(</span><span class=s2>&#34;The file is called:&#34;</span><span class=p>,</span> <span class=n>thefile</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=nb>print</span> <span class=p>(</span><span class=s2>&#34;Your first arg is:&#34;</span><span class=p>,</span> <span class=n>first_arg</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=nb>print</span> <span class=p>(</span><span class=s2>&#34;Your second arg is:&#34;</span><span class=p>,</span> <span class=n>second_arg</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=nb>print</span> <span class=p>(</span><span class=s2>&#34;Your third arg is:&#34;</span><span class=p>,</span> <span class=n>third_arg</span><span class=p>)</span>
-</span></span></code></pre></div></section></main><footer><small>Copyright 2022</small></footer><script src=dkb.js></script></div></body></html>
+<!DOCTYPE html>
+  <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeeKayBee</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+      <div class="container"><header>
+
+  <h1 class="site-title">DeeKayBee</h1>
+</header>
+
+
+<div id="topmenu">
+    <ul>
+
+      
+
+      
+
+      
+
+      
+      <li><a href="/">Home</a></li>
+      
+
+      
+      <li><a href="/projects">Projects</a></li>
+      
+
+      
+      <li><a href="/about">About</a></li>
+      
+
+    </ul>
+</div>
+<main>
+
+  <section class="notes">
+
+    <h1>Python Get Arguments</h1>
+    <h2 id="get-the-arguments-from-the-comand-line">Get the arguments from the comand line</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">thefile</span><span class="p">,</span> <span class="n">first_arg</span><span class="p">,</span> <span class="n">second_arg</span><span class="p">,</span> <span class="n">third_arg</span> <span class="o">=</span> <span class="n">argv</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;The file is called:&#34;</span><span class="p">,</span> <span class="n">thefile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;Your first arg is:&#34;</span><span class="p">,</span> <span class="n">first_arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;Your second arg is:&#34;</span><span class="p">,</span> <span class="n">second_arg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;Your third arg is:&#34;</span><span class="p">,</span> <span class="n">third_arg</span><span class="p">)</span>
+</span></span></code></pre></div>
+
+</section>
+
+
+        </main><footer>
+  <small>Copyright 2022</small>
+</footer>
+<script src="dkb.js"></script></div>
+    </body>
+  </html>

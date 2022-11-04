@@ -1,137 +1,227 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><div id=topmenu><ul><li><a href=/>Home</a></li><li><a href=/projects>Projects</a></li><li><a href=/about>About</a></li></ul></div><main><section class=notes><h1>Python Dictionaries</h1><p>General advice: there is more than one way to do everything. Pick one style.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># For examples I use this list</span>
-</span></span><span class=line><span class=cl><span class=n>l</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;one&#39;</span><span class=p>,</span> <span class=s1>&#39;two&#39;</span><span class=p>,</span> <span class=s1>&#39;three&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;one&#39;</span><span class=p>]</span>
-</span></span></code></pre></div><h1 id=the-basics>The basics</h1><p>Make a new empty dictionary:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d</span> <span class=o>=</span> <span class=nb>dict</span><span class=p>()</span>
-</span></span><span class=line><span class=cl><span class=n>d</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span></code></pre></div><p>Add item to a dictionary:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d</span><span class=p>[</span><span class=s1>&#39;a&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span>
-</span></span></code></pre></div><p>Get a value using a key:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>myval</span> <span class=o>=</span> <span class=n>d</span><span class=p>[</span><span class=s1>&#39;a&#39;</span><span class=p>]</span>
-</span></span></code></pre></div><p>Traverse keys:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>for</span> <span class=n>key</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>key</span><span class=p>)</span>
-</span></span></code></pre></div><p>Traverse keys and values:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
-</span></span></code></pre></div><p>The example above is the normal convention but you can traverse the keys and values like this too:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>for</span> <span class=n>a</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span> <span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>d</span><span class=p>[</span><span class=n>a</span><span class=p>])</span>
-</span></span></code></pre></div><h1 id=a-dictionary-counter>A dictionary counter</h1><p>Build a dictionary counter (a histogram)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>histogram</span><span class=p>(</span><span class=n>c</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>c</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=ow>not</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=n>d</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=n>d</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>+=</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>d</span>
-</span></span></code></pre></div><p>Build a dictionary counter (a histogram) using the default value for <code>get</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># From documentation:</span>
-</span></span><span class=line><span class=cl><span class=c1># get(key[, default])</span>
-</span></span><span class=line><span class=cl><span class=c1># Return the value for key if key is in the dictionary, else default.</span>
-</span></span><span class=line><span class=cl><span class=c1># If default is not given, it defaults to None, so that this method</span>
-</span></span><span class=line><span class=cl><span class=c1># never raises a KeyError.</span>
-</span></span><span class=line><span class=cl><span class=c1>#</span>
-</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>histogram1</span><span class=p>(</span><span class=n>c</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>c</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>         <span class=n>d</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>d</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>i</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>d</span>
-</span></span></code></pre></div><p>Build a dicionary counter using <code>setdefault</code>.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># From documentation</span>
-</span></span><span class=line><span class=cl><span class=c1># setdefault(key[, default])</span>
-</span></span><span class=line><span class=cl><span class=c1># If key is in the dictionary, return its value. If not, insert key with</span>
-</span></span><span class=line><span class=cl><span class=c1># a value  of default and return default. default defaults to None.</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># This works as well but I can&#39;t believe it is very efficient?</span>
-</span></span><span class=line><span class=cl><span class=c1># Let&#39;s step through it:</span>
-</span></span><span class=line><span class=cl><span class=c1># l = [</span>
-</span></span><span class=line><span class=cl><span class=c1>#     &#39;one&#39;, one does not exist as a key so it is created.</span>
-</span></span><span class=line><span class=cl><span class=c1>#            And the default value is returned 0 and 1 is added to that.</span>
-</span></span><span class=line><span class=cl><span class=c1>#            Finally the key is set again and has the value 1 assigned</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1>#     &#39;two&#39;,</span>
-</span></span><span class=line><span class=cl><span class=c1>#      &#39;three&#39;, &#39;four&#39;, &#39;four&#39;, &#39;four&#39;,</span>
-</span></span><span class=line><span class=cl><span class=c1>#     &#39;one&#39;] &#39;one&#39; does exist as a key so 1 is returned and 1 is added to is -</span>
-</span></span><span class=line><span class=cl><span class=c1>#            making two. The key one is reassigned the value 2.</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>histogram2</span><span class=p>(</span><span class=n>c</span><span class=p>):</span>
-</span></span><span class=line><span class=cl><span class=c1># DO NOT USE  </span>
-</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>c</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>         <span class=n>d</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>d</span><span class=o>.</span><span class=n>setdefault</span><span class=p>(</span><span class=n>i</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>d</span>
-</span></span></code></pre></div><p>A dictionary with list values</p><p>The following examples all build a dictionary like this from the list above - which is repeated here for convenience.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>l</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;one&#39;</span><span class=p>,</span> <span class=s1>&#39;two&#39;</span><span class=p>,</span> <span class=s1>&#39;three&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;one&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>key</span><span class=o>=</span> <span class=n>one</span>  <span class=o>|</span>  <span class=n>value</span><span class=o>=</span> <span class=p>[</span><span class=s1>&#39;one&#39;</span><span class=p>,</span> <span class=s1>&#39;one&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl><span class=n>key</span><span class=o>=</span> <span class=n>two</span>  <span class=o>|</span>  <span class=n>value</span><span class=o>=</span> <span class=p>[</span><span class=s1>&#39;two&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl><span class=n>key</span><span class=o>=</span> <span class=n>three</span>  <span class=o>|</span>  <span class=n>value</span><span class=o>=</span> <span class=p>[</span><span class=s1>&#39;three&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl><span class=n>key</span><span class=o>=</span> <span class=n>four</span>  <span class=o>|</span>  <span class=n>value</span><span class=o>=</span> <span class=p>[</span><span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>,</span> <span class=s1>&#39;four&#39;</span><span class=p>]</span>
-</span></span></code></pre></div><p>This uses if and else. It&rsquo;s really easy to read.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d2</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>i</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>d2</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d2</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=n>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d2</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d2</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
-</span></span></code></pre></div><p>This example is just an elaboration of above:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d4</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>i</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>d4</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d4</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=n>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=c1># This will get you the list</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>d4</span><span class=p>[</span><span class=n>i</span><span class=p>]))</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>d4</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)))</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>d4</span><span class=p>[</span><span class=n>i</span><span class=p>]))</span>
-</span></span><span class=line><span class=cl>        <span class=c1># but you can&#39;t do this!!!!</span>
-</span></span><span class=line><span class=cl>        <span class=c1># d4[i] = d4[i].append(i)</span>
-</span></span><span class=line><span class=cl>        <span class=c1># because append is not returning the list</span>
-</span></span><span class=line><span class=cl>        <span class=c1># it is adding to the list and returning none</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d4</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
-</span></span></code></pre></div><p>This uses <code>get</code> but is not adding much to the party as there is still an if-else.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d5</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>i</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>d5</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d5</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=n>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d5</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>i</span><span class=p>)</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d5</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+<!DOCTYPE html>
+  <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeeKayBee</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+      <div class="container"><header>
+
+  <h1 class="site-title">DeeKayBee</h1>
+</header>
+
+
+<div id="topmenu">
+    <ul>
+
+      
+
+      
+
+      
+
+      
+      <li><a href="/">Home</a></li>
+      
+
+      
+      <li><a href="/projects">Projects</a></li>
+      
+
+      
+      <li><a href="/about">About</a></li>
+      
+
+    </ul>
+</div>
+<main>
+
+  <section class="notes">
+
+    <h1>Python Dictionaries</h1>
+    <p>General advice: there is more than one way to do everything. Pick one style.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># For examples I use this list</span>
+</span></span><span class="line"><span class="cl"><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><h1 id="the-basics">The basics</h1>
+<p>Make a new empty dictionary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span></code></pre></div><p>Add item to a dictionary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span></code></pre></div><p>Get a value using a key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">myval</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><p>Traverse keys:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span></span></code></pre></div><p>Traverse keys and values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span></code></pre></div><p>The example above is the normal convention but you can traverse the keys and values like this too:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+</span></span></code></pre></div><h1 id="a-dictionary-counter">A dictionary counter</h1>
+<p>Build a dictionary counter (a histogram)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">d</span>
+</span></span></code></pre></div><p>Build a dictionary counter (a histogram) using the default value for <code>get</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># From documentation:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># get(key[, default])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Return the value for key if key is in the dictionary, else default.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If default is not given, it defaults to None, so that this method</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># never raises a KeyError.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">histogram1</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">d</span>
+</span></span></code></pre></div><p>Build a dicionary counter using <code>setdefault</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># From documentation</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># setdefault(key[, default])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If key is in the dictionary, return its value. If not, insert key with</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># a value  of default and return default. default defaults to None.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This works as well but I can&#39;t believe it is very efficient?</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Let&#39;s step through it:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># l = [</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;one&#39;, one does not exist as a key so it is created.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#            And the default value is returned 0 and 1 is added to that.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#            Finally the key is set again and has the value 1 assigned</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;two&#39;,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      &#39;three&#39;, &#39;four&#39;, &#39;four&#39;, &#39;four&#39;,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;one&#39;] &#39;one&#39; does exist as a key so 1 is returned and 1 is added to is -</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#            making two. The key one is reassigned the value 2.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">histogram2</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># DO NOT USE  </span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">d</span>
+</span></span></code></pre></div><p>A dictionary with list values</p>
+<p>The following examples all build a dictionary like this from the list above - which is repeated here for convenience.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">key</span><span class="o">=</span> <span class="n">one</span>  <span class="o">|</span>  <span class="n">value</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">key</span><span class="o">=</span> <span class="n">two</span>  <span class="o">|</span>  <span class="n">value</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">key</span><span class="o">=</span> <span class="n">three</span>  <span class="o">|</span>  <span class="n">value</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">key</span><span class="o">=</span> <span class="n">four</span>  <span class="o">|</span>  <span class="n">value</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><p>This uses if and else. It&rsquo;s really easy to read.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d2</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span></code></pre></div><p>This example is just an elaboration of above:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d4</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d4</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d4</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># This will get you the list</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d4</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d4</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d4</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># but you can&#39;t do this!!!!</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># d4[i] = d4[i].append(i)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># because append is not returning the list</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># it is adding to the list and returning none</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d4</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span></code></pre></div><p>This uses <code>get</code> but is not adding much to the party as there is still an if-else.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d5</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d5</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d5</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </span></span></code></pre></div><p>This will set the dictionary up with each key but append returns None and
-so all the dictionary values are none.</p><p>You can&rsquo;t use <code>get</code> in one line like this because the append does not return the reference to value which is a list.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># DO NOT USE THIS</span>
-</span></span><span class=line><span class=cl><span class=n>d5a</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=k>try</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d5a</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>d5a</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>i</span><span class=p>,[])</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Here&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>except</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Here 2&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d5a</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
-</span></span></code></pre></div><p>This example is also one I would consider using but is less easy to read for a beginner than the if-else construction..</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>d6</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>d6</span><span class=o>.</span><span class=n>setdefault</span><span class=p>(</span><span class=n>i</span><span class=p>,[])</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>    
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>key</span><span class=p>,</span> <span class=n>value</span> <span class=ow>in</span> <span class=n>d5</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
-</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;key=&#39;</span><span class=p>,</span> <span class=n>key</span><span class=p>,</span> <span class=s1>&#39; | &#39;</span><span class=p>,</span> <span class=s1>&#39;value=&#39;</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
-</span></span></code></pre></div><h1 id=invert-a-dictionary>Invert a dictionary:</h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>invert_dict</span><span class=p>(</span><span class=n>d</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=n>inverse</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>key</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>val</span> <span class=o>=</span> <span class=n>d</span><span class=p>[</span><span class=n>key</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=n>inverse</span><span class=o>.</span><span class=n>setdefault</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=p>[])</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>key</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>inverse</span>
-</span></span></code></pre></div><p>Here, we use the method <code>setdefault</code>.</p><p>The method <code>setdefault</code> will return the value if the key exists. Here the returned value will be a list. If the key is not found, a new entry is made with that key and the default value we have set - here, an empty list. Either way, the original key is appended to the list.</p><p>Invert a dictionary without using <code>setdefault</code> .</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>invert_dict1</span><span class=p>(</span><span class=n>d</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=n>inverse</span> <span class=o>=</span> <span class=nb>dict</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>key</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=n>val</span> <span class=o>=</span> <span class=n>d</span><span class=p>[</span><span class=n>key</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>val</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>inverse</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=n>inverse</span><span class=p>[</span><span class=n>val</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=n>key</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=n>inverse</span><span class=p>[</span><span class=n>val</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>key</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>inverse</span>
-</span></span></code></pre></div><h1 id=check-a-list-for-duplicates>Check a list for duplicates:</h1><p>(Tip use a set not this technique.)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>has_duplicates</span><span class=p>(</span><span class=n>l</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s1>&#39;&#39;&#39; Check for duplicates in a list using a dictionary
-</span></span></span><span class=line><span class=cl><span class=s1>    &#39;&#39;&#39;</span>
-</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=nb>dict</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>l</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>d</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>True</span>
-</span></span><span class=line><span class=cl>        <span class=n>d</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=kc>False</span>
-</span></span></code></pre></div></section></main><footer><small>Copyright 2022</small></footer><script src=dkb.js></script></div></body></html>
+so all the dictionary values are none.</p>
+<p>You can&rsquo;t use <code>get</code> in one line like this because the append does not return the reference to value which is a list.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># DO NOT USE THIS</span>
+</span></span><span class="line"><span class="cl"><span class="n">d5a</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d5a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">d5a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here 2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d5a</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span></code></pre></div><p>This example is also one I would consider using but is less easy to read for a beginner than the if-else construction..</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d6</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d6</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">i</span><span class="p">,[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d5</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;key=&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s1">&#39; | &#39;</span><span class="p">,</span> <span class="s1">&#39;value=&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="invert-a-dictionary">Invert a dictionary:</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">invert_dict</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inverse</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">val</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inverse</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">inverse</span>
+</span></span></code></pre></div><p>Here, we use the method <code>setdefault</code>.</p>
+<p>The method <code>setdefault</code> will return the value if the key exists. Here the returned value will be a list. If the key is not found, a new entry is made with that key and the default value we have set - here, an empty list. Either way, the original key is appended to the list.</p>
+<p>Invert a dictionary without using  <code>setdefault</code> .</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">invert_dict1</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inverse</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">val</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">inverse</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">inverse</span>
+</span></span></code></pre></div><h1 id="check-a-list-for-duplicates">Check a list for duplicates:</h1>
+<p>(Tip use a set not this technique.)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">has_duplicates</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39; Check for duplicates in a list using a dictionary
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">False</span>
+</span></span></code></pre></div>
+
+</section>
+
+
+        </main><footer>
+  <small>Copyright 2022</small>
+</footer>
+<script src="dkb.js"></script></div>
+    </body>
+  </html>

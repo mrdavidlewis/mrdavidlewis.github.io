@@ -1,15 +1,93 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><div id=topmenu><ul><li><a href=/>Home</a></li><li><a href=/projects>Projects</a></li><li><a href=/about>About</a></li></ul></div><main><section class=notes><h1>Python_pc_setup</h1><h2 id=install-the-python-binary-you-want-to-work-with>Install the Python binary you want to work with</h2><p>So for example the last binary I needed to install was the latest Python 3 for windows.
-The version was:</p><p><code>Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10)</code>.</p><p>The default installation location of Python is in the users folder. So it goes <code>%USERPROFILE%\AppData\Local\Programs\Python\Python36-32</code></p><p>See <a href=https://docs.python.org/3/using/windows.html>https://docs.python.org/3/using/windows.html</a> for details.</p><h2 id=set-up-a-virtual-environment>Set up a virtual environment</h2><p>Use venv:</p><pre tabindex=0><code>
+<!DOCTYPE html>
+  <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeeKayBee</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+      <div class="container"><header>
+
+  <h1 class="site-title">DeeKayBee</h1>
+</header>
+
+
+<div id="topmenu">
+    <ul>
+
+      
+
+      
+
+      
+
+      
+      <li><a href="/">Home</a></li>
+      
+
+      
+      <li><a href="/projects">Projects</a></li>
+      
+
+      
+      <li><a href="/about">About</a></li>
+      
+
+    </ul>
+</div>
+<main>
+
+  <section class="notes">
+
+    <h1>Python_pc_setup</h1>
+    <h2 id="install-the-python-binary-you-want-to-work-with">Install the Python binary you want to work with</h2>
+<p>So for example the last binary I needed to install was the latest Python 3 for windows.
+The version was:</p>
+<p><code>Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10)</code>.</p>
+<p>The default installation location of Python is in the users folder. So it goes <code>%USERPROFILE%\AppData\Local\Programs\Python\Python36-32</code></p>
+<p>See <a href="https://docs.python.org/3/using/windows.html">https://docs.python.org/3/using/windows.html</a> for details.</p>
+<h2 id="set-up-a-virtual-environment">Set up a virtual environment</h2>
+<p>Use venv:</p>
+<pre tabindex="0"><code>
 c:\Python35\python -m venv c:\path\to\myenv
-</code></pre><p>If you have spaces and are working is PS:</p><pre tabindex=0><code>&amp;(&#34;C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\python&#34;) -m venv d:\fast\mypy\genpy
-</code></pre><pre tabindex=0><code>c:\Python35\python -m venv c:\path\to\myenv
+</code></pre><p>If you have spaces and are working is PS:</p>
+<pre tabindex="0"><code>&amp;(&#34;C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\python&#34;) -m venv d:\fast\mypy\genpy
+</code></pre><pre tabindex="0"><code>c:\Python35\python -m venv c:\path\to\myenv
 c:\Python35\python -m venv c:\path\to\myenv
-</code></pre><h2 id=start-the-virtual-environment>Start the virtual environment</h2><pre tabindex=0><code>D:\fast\mypy\genpy\Scripts\activate.ps1
+</code></pre><h2 id="start-the-virtual-environment">Start the virtual environment</h2>
+<pre tabindex="0"><code>D:\fast\mypy\genpy\Scripts\activate.ps1
 D:\fast\mypy\dcldoc\Scripts\activate.ps1
 set-location D:\fast\mypy\dcldoc\webdev\output
-</code></pre><h2 id=pelican-quickstart>Pelican quickstart</h2><h3 id=start-server>Start Server</h3><p>Navigate to the folder you want to server</p><pre tabindex=0><code>set-location D:\fast\mypy\dcldoc\webdev\output
+</code></pre><h2 id="pelican-quickstart">Pelican quickstart</h2>
+<h3 id="start-server">Start Server</h3>
+<p>Navigate to the folder you want to server</p>
+<pre tabindex="0"><code>set-location D:\fast\mypy\dcldoc\webdev\output
 python -m pelican.server
-</code></pre><p>Navigate to <code>http://localhost:8000/</code></p><h3 id=publish-content>Publish content</h3><pre tabindex=0><code>set-location D:\fast\mypy\dcldoc\webdev
+</code></pre><p>Navigate to <code>http://localhost:8000/</code></p>
+<h3 id="publish-content">Publish content</h3>
+<pre tabindex="0"><code>set-location D:\fast\mypy\dcldoc\webdev
 pelicon content
 pelican content -s publishconf.py
-</code></pre></section></main><footer><small>Copyright 2022</small></footer><script src=dkb.js></script></div></body></html>
+</code></pre>
+
+</section>
+
+
+        </main><footer>
+  <small>Copyright 2022</small>
+</footer>
+<script src="dkb.js"></script></div>
+    </body>
+  </html>

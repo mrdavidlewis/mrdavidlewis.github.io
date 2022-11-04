@@ -1,89 +1,175 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>DeeKayBee</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel=stylesheet></head><body><div class=container><header><h1 class=site-title>DeeKayBee</h1></header><div id=topmenu><ul><li><a href=/>Home</a></li><li><a href=/projects>Projects</a></li><li><a href=/about>About</a></li></ul></div><main><section class=notes><h1>Python PC Setup II</h1><h2 id=install-the-python-binary>Install the Python binary</h2><p>Install the Python binary you want to work with if not already installed.
+<!DOCTYPE html>
+  <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeeKayBee</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+      <div class="container"><header>
+
+  <h1 class="site-title">DeeKayBee</h1>
+</header>
+
+
+<div id="topmenu">
+    <ul>
+
+      
+
+      
+
+      
+
+      
+      <li><a href="/">Home</a></li>
+      
+
+      
+      <li><a href="/projects">Projects</a></li>
+      
+
+      
+      <li><a href="/about">About</a></li>
+      
+
+    </ul>
+</div>
+<main>
+
+  <section class="notes">
+
+    <h1>Python PC Setup II</h1>
+    <h2 id="install-the-python-binary">Install the Python binary</h2>
+<p>Install the Python binary you want to work with if not already installed.
 So for example the last binary I needed to install was the latest Python 3 for windows.
-The version was:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>Python 3.6.0 <span class=o>(</span>v3.6.0:41df79263a11, Dec <span class=m>23</span> 2016, 07:18:10<span class=o>)</span>
-</span></span></code></pre></div><p>The default installation location of Python is in the users folder. So it was installed in:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=k>%</span><span class=n>USERPROFILE</span><span class=p>%\</span><span class=n>AppData</span><span class=p>\</span><span class=n>Local</span><span class=p>\</span><span class=n>Programs</span><span class=p>\</span><span class=n>Python</span><span class=p>\</span><span class=n>Python36</span><span class=p>-</span><span class=n>32</span>
-</span></span></code></pre></div><p>See <a href=https://docs.python.org/3/using/windows.html>https://docs.python.org/3/using/windows.html</a> for details.</p><h2 id=install-a-python-virtual-environment-using-venv>Install a Python virtual environment using venv</h2><p>The venv docs are here:
-<a href=https://docs.python.org/3/library/venv.html>https://docs.python.org/3/library/venv.html</a></p><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>c:</span><span class=p>\</span><span class=n>Users</span><span class=p>\</span><span class=n>dlewis</span><span class=p>\</span><span class=n>AppData</span><span class=p>\</span><span class=n>Local</span><span class=p>\</span><span class=n>Programs</span><span class=p>\</span><span class=n>Python</span><span class=p>\</span><span class=n>Python36</span><span class=p>-</span><span class=n>32</span><span class=p>\</span><span class=n>python</span> <span class=n>-m</span> <span class=n>venv</span> <span class=n>C:</span><span class=p>\</span><span class=n>David</span><span class=p>\</span><span class=n>Jup</span>
-</span></span></code></pre></div><p>Tip: if you user name has a space in you are going to need to use the & and bracket. e.g.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=p>&amp;</span> <span class=o>(</span>path with a space in<span class=o>)</span>
-</span></span></code></pre></div><h2 id=start-the-virtual-environment>Start the virtual environment</h2><p>You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=nb>Set-ExecutionPolicy</span> <span class=n>RemoteSigned</span>
-</span></span></code></pre></div><h2 id=activate-virtual-environment>Activate virtual environment</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>C:</span><span class=p>\</span><span class=n>David</span><span class=p>\</span><span class=n>Jup</span><span class=p>\</span><span class=n>Scripts</span><span class=p>\</span><span class=n>Activate</span><span class=p>.</span><span class=n>ps1</span>
-</span></span></code></pre></div><h2 id=install-jupyter-notebooks>Install Jupyter Notebooks</h2><p><a href=http://jupyter.readthedocs.io/en/latest/install.html>http://jupyter.readthedocs.io/en/latest/install.html</a></p><p>Check pip is up-to-date</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install --upgrade pip
-</span></span></code></pre></div><h3 id=install-jupyter>Install Jupyter</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install jupyter
-</span></span></code></pre></div><h3 id=install-pandas-and-its-dependencies>Install pandas and it&rsquo;s dependencies</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install pandas
-</span></span></code></pre></div><h3 id=install-matplotlib>Install matplotlib:</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install matplotlib
-</span></span></code></pre></div><h3 id=to-install-scipy>To install scipy:</h3><ul><li>Download relevant wheel</li><li><a href=http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy>http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></li><li>Put wheel in a folder</li></ul><p>Then install wheel with pip3:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 scipy-0.19.0-cp36-cp36m-win32.whl
-</span></span></code></pre></div><h3 id=reinstall-numpy-because-it-is-missing-mkl>Reinstall numpy because it is missing mkl:</h3><p>Download relevant wheel:</p><ul><li><a href=http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy>http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 uninstall numpy
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
-</span></span></code></pre></div><h3 id=install-nose-so-you-can-test-installation>Install nose so you can test installation</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pip3 install nose
-</span></span></code></pre></div><h2 id=test-installation>Test installation</h2><p>Start Python in shell.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>scipy</span>
-</span></span><span class=line><span class=cl><span class=n>scipy</span><span class=o>.</span><span class=n>test</span><span class=p>(</span><span class=s1>&#39;full&#39;</span><span class=p>)</span>
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>======================================================================</span>
-</span></span><span class=line><span class=cl>FAIL: test_decomp_update.TestQRdelete_F.test_delete_last_p_col
-</span></span><span class=line><span class=cl>----------------------------------------------------------------------
-</span></span><span class=line><span class=cl>Traceback <span class=o>(</span>most recent call last<span class=o>)</span>:
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\nose\case.py&#34;</span>, line 198, in runTest
-</span></span><span class=line><span class=cl>    self.test<span class=o>(</span>*self.arg<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\scipy\linalg\tests\test_decomp_update.py&#34;</span>
-</span></span><span class=line><span class=cl>, line 328, in test_delete_last_p_col
-</span></span><span class=line><span class=cl>    assert_unitary<span class=o>(</span>q1<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\scipy\linalg\tests\test_decomp_update.py&#34;</span>
-</span></span><span class=line><span class=cl>, line 21, in assert_unitary
-</span></span><span class=line><span class=cl>    assert_allclose<span class=o>(</span>aTa, np.eye<span class=o>(</span>a.shape<span class=o>[</span>1<span class=o>])</span>, <span class=nv>rtol</span><span class=o>=</span>rtol, <span class=nv>atol</span><span class=o>=</span>atol<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 1411, in as
-</span></span><span class=line><span class=cl>sert_allclose
-</span></span><span class=line><span class=cl>    <span class=nv>verbose</span><span class=o>=</span>verbose, <span class=nv>header</span><span class=o>=</span>header, <span class=nv>equal_nan</span><span class=o>=</span>equal_nan<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 796, in ass
-</span></span><span class=line><span class=cl>ert_array_compare
-</span></span><span class=line><span class=cl>    raise AssertionError<span class=o>(</span>msg<span class=o>)</span>
-</span></span><span class=line><span class=cl>AssertionError:
-</span></span><span class=line><span class=cl>Not equal to tolerance <span class=nv>rtol</span><span class=o>=</span>0.0001, <span class=nv>atol</span><span class=o>=</span>2.38419e-07
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=o>(</span>mismatch 1.3888888888888857%<span class=o>)</span>
-</span></span><span class=line><span class=cl> x: array<span class=o>([[</span>  1.000000e+00 +0.000000e+00j,  -4.097819e-08 +2.980232e-08j,
-</span></span><span class=line><span class=cl>         -2.607703e-08 -1.490116e-08j,   5.587935e-09 -1.490116e-08j,
-</span></span><span class=line><span class=cl>         -2.235174e-08 -1.862645e-08j,  -2.793968e-09 +2.887100e-08j,...
-</span></span><span class=line><span class=cl> y: array<span class=o>([[</span> 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class=o>]</span>,
-</span></span><span class=line><span class=cl>       <span class=o>[</span> 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class=o>]</span>,
-</span></span><span class=line><span class=cl>       <span class=o>[</span> 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class=o>]</span>,...
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>======================================================================</span>
-</span></span><span class=line><span class=cl>FAIL: test_orthogonal.test_roots_gegenbauer
-</span></span><span class=line><span class=cl>----------------------------------------------------------------------
-</span></span><span class=line><span class=cl>Traceback <span class=o>(</span>most recent call last<span class=o>)</span>:
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\nose\case.py&#34;</span>, line 198, in runTest
-</span></span><span class=line><span class=cl>    self.test<span class=o>(</span>*self.arg<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\scipy\special\tests\test_orthogonal.py&#34;</span>,
-</span></span><span class=line><span class=cl>line 504, in test_roots_gegenbauer
-</span></span><span class=line><span class=cl>    vgq<span class=o>(</span>rootf<span class=o>(</span>0.1<span class=o>)</span>, evalf<span class=o>(</span>0.1<span class=o>)</span>, weightf<span class=o>(</span>0.1<span class=o>)</span>, -1., 1., 25, <span class=nv>atol</span><span class=o>=</span>1e-13<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\scipy\special\tests\test_orthogonal.py&#34;</span>,
-</span></span><span class=line><span class=cl>line 287, in verify_gauss_quad
-</span></span><span class=line><span class=cl>    assert_allclose<span class=o>(</span>vv, np.eye<span class=o>(</span>N<span class=o>)</span>, rtol, atol<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 1411, in as
-</span></span><span class=line><span class=cl>sert_allclose
-</span></span><span class=line><span class=cl>    <span class=nv>verbose</span><span class=o>=</span>verbose, <span class=nv>header</span><span class=o>=</span>header, <span class=nv>equal_nan</span><span class=o>=</span>equal_nan<span class=o>)</span>
-</span></span><span class=line><span class=cl>  File <span class=s2>&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 796, in ass
-</span></span><span class=line><span class=cl>ert_array_compare
-</span></span><span class=line><span class=cl>    raise AssertionError<span class=o>(</span>msg<span class=o>)</span>
-</span></span><span class=line><span class=cl>AssertionError:
-</span></span><span class=line><span class=cl>Not equal to tolerance <span class=nv>rtol</span><span class=o>=</span>1e-15, <span class=nv>atol</span><span class=o>=</span>1e-13
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=o>(</span>mismatch 5.760000000000005%<span class=o>)</span>
-</span></span><span class=line><span class=cl> x: array<span class=o>([[</span>  1.000000e+00,  -1.854755e-17,   7.310015e-14,  -7.627779e-17,
-</span></span><span class=line><span class=cl>          7.238787e-14,   2.754201e-17,   7.247653e-14,   1.854543e-17,
-</span></span><span class=line><span class=cl>          6.807551e-14,   1.468432e-16,   6.300386e-14,   3.789022e-16,...
-</span></span><span class=line><span class=cl> y: array<span class=o>([[</span> 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
-</span></span><span class=line><span class=cl>         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class=o>]</span>,
-</span></span><span class=line><span class=cl>       <span class=o>[</span> 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,...
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>----------------------------------------------------------------------
-</span></span></code></pre></div><pre tabindex=0><code class=language-output data-lang=output>----------------------------------------------------------
+The version was:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Python 3.6.0 <span class="o">(</span>v3.6.0:41df79263a11, Dec <span class="m">23</span> 2016, 07:18:10<span class="o">)</span>
+</span></span></code></pre></div><p>The default installation location of Python is in the users folder. So it was installed in:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="k">%</span><span class="n">USERPROFILE</span><span class="p">%\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Programs</span><span class="p">\</span><span class="n">Python</span><span class="p">\</span><span class="n">Python36</span><span class="p">-</span><span class="n">32</span>
+</span></span></code></pre></div><p>See <a href="https://docs.python.org/3/using/windows.html">https://docs.python.org/3/using/windows.html</a> for details.</p>
+<h2 id="install-a-python-virtual-environment-using-venv">Install a Python virtual environment using venv</h2>
+<p>The venv docs are here:
+<a href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a></p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">c:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">dlewis</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Programs</span><span class="p">\</span><span class="n">Python</span><span class="p">\</span><span class="n">Python36</span><span class="p">-</span><span class="n">32</span><span class="p">\</span><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">C:</span><span class="p">\</span><span class="n">David</span><span class="p">\</span><span class="n">Jup</span>
+</span></span></code></pre></div><p>Tip: if you user name has a space in you are going to need to use the &amp; and bracket. e.g.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="p">&amp;</span> <span class="o">(</span>path with a space in<span class="o">)</span>
+</span></span></code></pre></div><h2 id="start-the-virtual-environment">Start the virtual environment</h2>
+<p>You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
+</span></span></code></pre></div><h2 id="activate-virtual-environment">Activate virtual environment</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">C:</span><span class="p">\</span><span class="n">David</span><span class="p">\</span><span class="n">Jup</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span></span></code></pre></div><h2 id="install-jupyter-notebooks">Install Jupyter Notebooks</h2>
+<p><a href="http://jupyter.readthedocs.io/en/latest/install.html">http://jupyter.readthedocs.io/en/latest/install.html</a></p>
+<p>Check pip is up-to-date</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install --upgrade pip
+</span></span></code></pre></div><h3 id="install-jupyter">Install Jupyter</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install jupyter
+</span></span></code></pre></div><h3 id="install-pandas-and-its-dependencies">Install pandas and it&rsquo;s dependencies</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install pandas
+</span></span></code></pre></div><h3 id="install-matplotlib">Install matplotlib:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install matplotlib
+</span></span></code></pre></div><h3 id="to-install-scipy">To install scipy:</h3>
+<ul>
+<li>Download relevant wheel</li>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></li>
+<li>Put wheel in a folder</li>
+</ul>
+<p>Then install wheel with pip3:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 scipy-0.19.0-cp36-cp36m-win32.whl
+</span></span></code></pre></div><h3 id="reinstall-numpy-because-it-is-missing-mkl">Reinstall numpy because it is missing mkl:</h3>
+<p>Download relevant wheel:</p>
+<ul>
+<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 uninstall numpy
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
+</span></span></code></pre></div><h3 id="install-nose-so-you-can-test-installation">Install nose so you can test installation</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install nose
+</span></span></code></pre></div><h2 id="test-installation">Test installation</h2>
+<p>Start Python in shell.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">scipy</span>
+</span></span><span class="line"><span class="cl"><span class="n">scipy</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;full&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">======================================================================</span>
+</span></span><span class="line"><span class="cl">FAIL: test_decomp_update.TestQRdelete_F.test_delete_last_p_col
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\nose\case.py&#34;</span>, line 198, in runTest
+</span></span><span class="line"><span class="cl">    self.test<span class="o">(</span>*self.arg<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\scipy\linalg\tests\test_decomp_update.py&#34;</span>
+</span></span><span class="line"><span class="cl">, line 328, in test_delete_last_p_col
+</span></span><span class="line"><span class="cl">    assert_unitary<span class="o">(</span>q1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\scipy\linalg\tests\test_decomp_update.py&#34;</span>
+</span></span><span class="line"><span class="cl">, line 21, in assert_unitary
+</span></span><span class="line"><span class="cl">    assert_allclose<span class="o">(</span>aTa, np.eye<span class="o">(</span>a.shape<span class="o">[</span>1<span class="o">])</span>, <span class="nv">rtol</span><span class="o">=</span>rtol, <span class="nv">atol</span><span class="o">=</span>atol<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 1411, in as
+</span></span><span class="line"><span class="cl">sert_allclose
+</span></span><span class="line"><span class="cl">    <span class="nv">verbose</span><span class="o">=</span>verbose, <span class="nv">header</span><span class="o">=</span>header, <span class="nv">equal_nan</span><span class="o">=</span>equal_nan<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 796, in ass
+</span></span><span class="line"><span class="cl">ert_array_compare
+</span></span><span class="line"><span class="cl">    raise AssertionError<span class="o">(</span>msg<span class="o">)</span>
+</span></span><span class="line"><span class="cl">AssertionError:
+</span></span><span class="line"><span class="cl">Not equal to tolerance <span class="nv">rtol</span><span class="o">=</span>0.0001, <span class="nv">atol</span><span class="o">=</span>2.38419e-07
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>mismatch 1.3888888888888857%<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> x: array<span class="o">([[</span>  1.000000e+00 +0.000000e+00j,  -4.097819e-08 +2.980232e-08j,
+</span></span><span class="line"><span class="cl">         -2.607703e-08 -1.490116e-08j,   5.587935e-09 -1.490116e-08j,
+</span></span><span class="line"><span class="cl">         -2.235174e-08 -1.862645e-08j,  -2.793968e-09 +2.887100e-08j,...
+</span></span><span class="line"><span class="cl"> y: array<span class="o">([[</span> 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class="o">]</span>,
+</span></span><span class="line"><span class="cl">       <span class="o">[</span> 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class="o">]</span>,
+</span></span><span class="line"><span class="cl">       <span class="o">[</span> 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class="o">]</span>,...
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">======================================================================</span>
+</span></span><span class="line"><span class="cl">FAIL: test_orthogonal.test_roots_gegenbauer
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\nose\case.py&#34;</span>, line 198, in runTest
+</span></span><span class="line"><span class="cl">    self.test<span class="o">(</span>*self.arg<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\scipy\special\tests\test_orthogonal.py&#34;</span>,
+</span></span><span class="line"><span class="cl">line 504, in test_roots_gegenbauer
+</span></span><span class="line"><span class="cl">    vgq<span class="o">(</span>rootf<span class="o">(</span>0.1<span class="o">)</span>, evalf<span class="o">(</span>0.1<span class="o">)</span>, weightf<span class="o">(</span>0.1<span class="o">)</span>, -1., 1., 25, <span class="nv">atol</span><span class="o">=</span>1e-13<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\scipy\special\tests\test_orthogonal.py&#34;</span>,
+</span></span><span class="line"><span class="cl">line 287, in verify_gauss_quad
+</span></span><span class="line"><span class="cl">    assert_allclose<span class="o">(</span>vv, np.eye<span class="o">(</span>N<span class="o">)</span>, rtol, atol<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 1411, in as
+</span></span><span class="line"><span class="cl">sert_allclose
+</span></span><span class="line"><span class="cl">    <span class="nv">verbose</span><span class="o">=</span>verbose, <span class="nv">header</span><span class="o">=</span>header, <span class="nv">equal_nan</span><span class="o">=</span>equal_nan<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  File <span class="s2">&#34;C:\David\Jup\lib\site-packages\numpy\testing\utils.py&#34;</span>, line 796, in ass
+</span></span><span class="line"><span class="cl">ert_array_compare
+</span></span><span class="line"><span class="cl">    raise AssertionError<span class="o">(</span>msg<span class="o">)</span>
+</span></span><span class="line"><span class="cl">AssertionError:
+</span></span><span class="line"><span class="cl">Not equal to tolerance <span class="nv">rtol</span><span class="o">=</span>1e-15, <span class="nv">atol</span><span class="o">=</span>1e-13
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>mismatch 5.760000000000005%<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> x: array<span class="o">([[</span>  1.000000e+00,  -1.854755e-17,   7.310015e-14,  -7.627779e-17,
+</span></span><span class="line"><span class="cl">          7.238787e-14,   2.754201e-17,   7.247653e-14,   1.854543e-17,
+</span></span><span class="line"><span class="cl">          6.807551e-14,   1.468432e-16,   6.300386e-14,   3.789022e-16,...
+</span></span><span class="line"><span class="cl"> y: array<span class="o">([[</span> 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+</span></span><span class="line"><span class="cl">         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.<span class="o">]</span>,
+</span></span><span class="line"><span class="cl">       <span class="o">[</span> 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------------
+</span></span></code></pre></div><pre tabindex="0"><code class="language-output" data-lang="output">----------------------------------------------------------
 Ran 25578 tests in 610.564s
 
 FAILED (KNOWNFAIL=129, SKIP=2117, failures=2)
 &lt;nose.result.TextTestResult run=25578 errors=0 failures=2&gt;
 ----------------------------------------------------------
-</code></pre><pre tabindex=0><code class=language-code data-lang=code>import numpy
+</code></pre><pre tabindex="0"><code class="language-code" data-lang="code">import numpy
 numpy.test(&#39;full&#39;)
-</code></pre><pre tabindex=0><code class=language-output data-lang=output>======================================================================
+</code></pre><pre tabindex="0"><code class="language-output" data-lang="output">======================================================================
 FAIL: test_default (test_numeric.TestSeterr)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -101,7 +187,7 @@ ore&#39;}
 
 
 ======================================================================
-</code></pre><pre tabindex=0><code class=language-output data-lang=output>======================================================================
+</code></pre><pre tabindex="0"><code class="language-output" data-lang="output">======================================================================
 FAIL: test_io.test_load_refcount
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -116,7 +202,7 @@ ert_
 AssertionError
 
 ----------------------------------------------------------------------
-</code></pre><pre tabindex=0><code class=language-output data-lang=output>======================================================================
+</code></pre><pre tabindex="0"><code class="language-output" data-lang="output">======================================================================
 FAIL: test_io.test_load_refcount
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -131,8 +217,24 @@ ert_
 AssertionError
 
 ----------------------------------------------------------------------
-</code></pre><h2 id=start-jupyter-notebook>Start Jupyter Notebook</h2><p>You might need to map a drive first:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>net</span> <span class=n>use</span> <span class=n>z:</span> <span class=p>\\</span><span class=n>servername</span><span class=p>\</span><span class=n>users</span><span class=p>\</span><span class=n>username</span>
-</span></span></code></pre></div><p>Activate virtual environment:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>C:</span><span class=p>\</span><span class=n>David</span><span class=p>\</span><span class=n>Jup</span><span class=p>\</span><span class=n>Scripts</span><span class=p>\</span><span class=n>Activate</span><span class=p>.</span><span class=n>ps1</span>
-</span></span></code></pre></div><p>Finally start the notebook.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>jupyter notebook
-</span></span></code></pre></div><p>To stop the server: <code>ctrl-C</code></p><p>To return ExecutionPolicy to the default safe level.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=nb>Set-ExecutionPolicy</span> <span class=n>Restricted</span>
-</span></span></code></pre></div></section></main><footer><small>Copyright 2022</small></footer><script src=dkb.js></script></div></body></html>
+</code></pre><h2 id="start-jupyter-notebook">Start Jupyter Notebook</h2>
+<p>You might need to map a drive first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">net</span> <span class="n">use</span> <span class="n">z:</span> <span class="p">\\</span><span class="n">servername</span><span class="p">\</span><span class="n">users</span><span class="p">\</span><span class="n">username</span>
+</span></span></code></pre></div><p>Activate virtual environment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">C:</span><span class="p">\</span><span class="n">David</span><span class="p">\</span><span class="n">Jup</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span></span></code></pre></div><p>Finally start the notebook.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">jupyter notebook
+</span></span></code></pre></div><p>To stop the server: <code>ctrl-C</code></p>
+<p>To return ExecutionPolicy to the default safe level.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">Restricted</span>
+</span></span></code></pre></div>
+
+</section>
+
+
+        </main><footer>
+  <small>Copyright 2022</small>
+</footer>
+<script src="dkb.js"></script></div>
+    </body>
+  </html>

@@ -1,185 +1,566 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DeeKayBee</title><link>https://mrdavidlewis.github.io/</link><description>Recent content on DeeKayBee</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><lastBuildDate>Thu, 03 Nov 2022 10:17:21 +0000</lastBuildDate><atom:link href="https://mrdavidlewis.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS Typography</title><link>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</link><pubDate>Thu, 03 Nov 2022 10:17:21 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</guid><description>Typography This is an example:
-h1 { font-size: 3rem; }</description></item><item><title>CSS Selectors</title><link>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</link><pubDate>Wed, 02 Nov 2022 16:03:24 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</guid><description>Element selector: h1 { font-size: 4rem; } ID selector: #main { color: red; } Class selector: .nav { background-color: blue; } Compound selectors Match all h1 elements with a class of front-page
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeeKayBee</title>
+    <link>https://mrdavidlewis.github.io/</link>
+    <description>Recent content on DeeKayBee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Thu, 03 Nov 2022 10:17:21 +0000</lastBuildDate><atom:link href="https://mrdavidlewis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Typography</title>
+      <link>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</link>
+      <pubDate>Thu, 03 Nov 2022 10:17:21 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</guid>
+      <description>Typography This is an example:
+h1 { font-size: 3rem; } </description>
+    </item>
+    
+    <item>
+      <title>CSS Selectors</title>
+      <link>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</link>
+      <pubDate>Wed, 02 Nov 2022 16:03:24 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</guid>
+      <description>Element selector: h1 { font-size: 4rem; } ID selector: #main { color: red; } Class selector: .nav { background-color: blue; } Compound selectors Match all h1 elements with a class of front-page
 h1.front-page { letter-spacing: 0.05rem; } Match all h1 elements with a class of both front-page and head-line
-h1.front-page.head-line { line-spacing: 1rem; } Descendant combinator The space makes it a descendant combinator. This matched all right-side elements that are direct or indirect descandent of the left-side.</description></item><item><title>Build site</title><link>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</link><pubDate>Wed, 02 Nov 2022 15:37:15 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</guid><description>Prior to deploying a site you need to build it.
+h1.front-page.head-line { line-spacing: 1rem; } Descendant combinator The space makes it a descendant combinator. This matched all right-side elements that are direct or indirect descandent of the left-side.</description>
+    </item>
+    
+    <item>
+      <title>Build site</title>
+      <link>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</link>
+      <pubDate>Wed, 02 Nov 2022 15:37:15 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/hugo/basics/build_site/</guid>
+      <description>Prior to deploying a site you need to build it.
 This process places the site which needs to be deployed in public.
 Publish site to public:
 hugo Remove public:
 rm -r public Clean up using Hugo. By default hugo leaves content in public that is not longer in content. This command cleans up those orphans:
 hugo --cleanDestinationDir Remove and publish:
 rm -r public &amp;amp;&amp;amp; hugo Publish and minimise:
-hugo --cleanDestinationDir --minify</description></item><item><title>Visualise a set of colours</title><link>https://mrdavidlewis.github.io/notes/design/basics/visualise_a_set_of_colours/</link><pubDate>Wed, 02 Nov 2022 14:23:04 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/design/basics/visualise_a_set_of_colours/</guid><description>See an example:
+hugo --cleanDestinationDir --minify </description>
+    </item>
+    
+    <item>
+      <title>Visualise a set of colours</title>
+      <link>https://mrdavidlewis.github.io/notes/design/basics/visualise_a_set_of_colours/</link>
+      <pubDate>Wed, 02 Nov 2022 14:23:04 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/design/basics/visualise_a_set_of_colours/</guid>
+      <description>See an example:
 Below implemented
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;IVP Colours&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; #main-container { display: flex; flex-direction: row; flex-wrap: wrap; } .colour-item { margin: 1rem; padding: 1rem; width: 10rem; text-align: center; margin-right: 1rem; border: 0px solid khaki; border-radius: .5rem; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;IVP Colours&amp;lt;/h1&amp;gt; &amp;lt;div id=&amp;#34;main-container&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; function write_colours() { let mycolors = [[&amp;#39;rgb(180,180,180)&amp;#39;], [&amp;#39;rgb(199,51,100)&amp;#39;], [&amp;#39;rgb(199,51,54)&amp;#39;], [&amp;#39;rgb(247,137,42)&amp;#39;], [&amp;#39;rgb(251,104,39)&amp;#39;], [&amp;#39;rgb(103,106,204)&amp;#39;], [&amp;#39;rgb(147,204,224)&amp;#39;], [ &amp;#39;rgb(121,184,255)&amp;#39;], [&amp;#39;rgb(229, 240, 224)&amp;#39;], [&amp;#39;rgb(61, 56, 56)&amp;#39;], [&amp;#39;rgb(84, 144, 136)&amp;#39;], [&amp;#39;rgb(0, 100, 0, .</description></item><item><title>Add a new note</title><link>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</link><pubDate>Wed, 02 Nov 2022 14:10:20 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</guid><description>hugo new notes/hugo/add_post.md</description></item><item><title>Python in Basics</title><link>https://mrdavidlewis.github.io/notes/python/basics/python1/</link><pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python1/</guid><description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
-from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description></item><item><title>Python in Python Other</title><link>https://mrdavidlewis.github.io/notes/python/other/python1/</link><pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python1/</guid><description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
-from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description></item><item><title>Python in SQL</title><link>https://mrdavidlewis.github.io/notes/sql/other/python1/</link><pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python1/</guid><description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
-from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description></item><item><title>Python in SQL Basics a bit longer than average title</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python1/</link><pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python1/</guid><description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
-from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description></item><item><title>Python PC Setup IV</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iv/</link><pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iv/</guid><description>Install the Python binary you want to work with In my case Python 2 is installed here:
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;IVP Colours&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; #main-container { display: flex; flex-direction: row; flex-wrap: wrap; } .colour-item { margin: 1rem; padding: 1rem; width: 10rem; text-align: center; margin-right: 1rem; border: 0px solid khaki; border-radius: .5rem; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;IVP Colours&amp;lt;/h1&amp;gt; &amp;lt;div id=&amp;#34;main-container&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; function write_colours() { let mycolors = [[&amp;#39;rgb(180,180,180)&amp;#39;], [&amp;#39;rgb(199,51,100)&amp;#39;], [&amp;#39;rgb(199,51,54)&amp;#39;], [&amp;#39;rgb(247,137,42)&amp;#39;], [&amp;#39;rgb(251,104,39)&amp;#39;], [&amp;#39;rgb(103,106,204)&amp;#39;], [&amp;#39;rgb(147,204,224)&amp;#39;], [ &amp;#39;rgb(121,184,255)&amp;#39;], [&amp;#39;rgb(229, 240, 224)&amp;#39;], [&amp;#39;rgb(61, 56, 56)&amp;#39;], [&amp;#39;rgb(84, 144, 136)&amp;#39;], [&amp;#39;rgb(0, 100, 0, .</description>
+    </item>
+    
+    <item>
+      <title>Add a new note</title>
+      <link>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</link>
+      <pubDate>Wed, 02 Nov 2022 14:10:20 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/hugo/basics/add_post/</guid>
+      <description>hugo new notes/hugo/add_post.md </description>
+    </item>
+    
+    <item>
+      <title>Python in Basics</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python1/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python1/</guid>
+      <description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
+from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description>
+    </item>
+    
+    <item>
+      <title>Python in Python Other</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python1/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python1/</guid>
+      <description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
+from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description>
+    </item>
+    
+    <item>
+      <title>Python in SQL</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python1/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python1/</guid>
+      <description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
+from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description>
+    </item>
+    
+    <item>
+      <title>Python in SQL Basics a bit longer than average title</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python1/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:53 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python1/</guid>
+      <description>This script mines timings from a log file It finds the text &amp;lsquo;iteration&amp;rsquo; every thousand records and extracts the time
+from sys import argv from os.path import exists import re import time script, log_file = argv timestr = time.strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) print log_file count_file = open(&amp;#39;scrape_log_%s_%s.txt&amp;#39; % (log_file, timestr), &amp;#39;w&amp;#39;) if exists(log_file): f = open(log_file) txt = f.read() f.close() pattern_1 = re.compile(r&amp;#34;Iteration : (1).+?(\d\d-...-\d\d\d\d \d\d:\d\d:\d\d?)&amp;#34;, re.DOTALL) mo_01 = pattern_1.search(txt) if mo_01 != None: print mo_01.</description>
+    </item>
+    
+    <item>
+      <title>Python PC Setup IV</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iv/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iv/</guid>
+      <description>Install the Python binary you want to work with In my case Python 2 is installed here:
 c:\Python27\ Check virtual env is installed
 c:\Python27\python -m pip install virtualenv Create a virtual environvent
 c:\Python27\python -m virtualenv d:\fast\mypy\genpy27 Activate the environment
 D:\fast\mypy\genpy27\Scripts\activate.ps1 Check pip is up-to-date pip install --upgrade pip Install numpy from wheel including mkl — to match the Python version Download relevant wheel:
-set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description></item><item><title>Python_pc_setup_IV</title><link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iv/</link><pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iv/</guid><description>Install the Python binary you want to work with In my case Python 2 is installed here:
+set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_IV</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iv/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iv/</guid>
+      <description>Install the Python binary you want to work with In my case Python 2 is installed here:
 c:\Python27\ Check virtual env is installed
 c:\Python27\python -m pip install virtualenv Create a virtual environvent
 c:\Python27\python -m virtualenv d:\fast\mypy\genpy27 Activate the environment
 D:\fast\mypy\genpy27\Scripts\activate.ps1 Check pip is up-to-date pip install --upgrade pip Install numpy from wheel including mkl — to match the Python version Download relevant wheel:
-set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description></item><item><title>Python_pc_setup_IV</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iv/</link><pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iv/</guid><description>Install the Python binary you want to work with In my case Python 2 is installed here:
+set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_IV</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iv/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iv/</guid>
+      <description>Install the Python binary you want to work with In my case Python 2 is installed here:
 c:\Python27\ Check virtual env is installed
 c:\Python27\python -m pip install virtualenv Create a virtual environvent
 c:\Python27\python -m virtualenv d:\fast\mypy\genpy27 Activate the environment
 D:\fast\mypy\genpy27\Scripts\activate.ps1 Check pip is up-to-date pip install --upgrade pip Install numpy from wheel including mkl — to match the Python version Download relevant wheel:
-set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description></item><item><title>Python_pc_setup_IV</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iv/</link><pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iv/</guid><description>Install the Python binary you want to work with In my case Python 2 is installed here:
+set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_IV</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iv/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:39 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iv/</guid>
+      <description>Install the Python binary you want to work with In my case Python 2 is installed here:
 c:\Python27\ Check virtual env is installed
 c:\Python27\python -m pip install virtualenv Create a virtual environvent
 c:\Python27\python -m virtualenv d:\fast\mypy\genpy27 Activate the environment
 D:\fast\mypy\genpy27\Scripts\activate.ps1 Check pip is up-to-date pip install --upgrade pip Install numpy from wheel including mkl — to match the Python version Download relevant wheel:
-set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description></item><item><title>Python PC Setup III</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iii/</link><pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed.
+set-location C:\Users\David Lewis\Downloads pip install numpy-1.14.0+mkl-cp27-cp27m-win_amd64.whl Install scipy from wheel — to match the Python version: pip install scipy-1.</description>
+    </item>
+    
+    <item>
+      <title>Python PC Setup III</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_iii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed.
 The default installation location of Python 3 is in the users folder.
 So it will be installed somewhere like this:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Example:
 c:\Users\dlewis\AppData\Local\Programs\Python\Python36-32\python -m venv C:\David\Jup Tip: if you user name has a space in you are going to need to use the &amp;amp; and bracket. e.g.
-&amp;amp; (path with a space in) &amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description></item><item><title>Python_pc_setup_III</title><link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iii/</link><pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed.
+&amp;amp; (path with a space in) &amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_III</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_iii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed.
 The default installation location of Python 3 is in the users folder.
 So it will be installed somewhere like this:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Example:
 c:\Users\dlewis\AppData\Local\Programs\Python\Python36-32\python -m venv C:\David\Jup Tip: if you user name has a space in you are going to need to use the &amp;amp; and bracket. e.g.
-&amp;amp; (path with a space in)
-&amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description></item><item><title>Python_pc_setup_III</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iii/</link><pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed.
+&amp;amp; (path with a space in)&amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_III</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_iii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed.
 The default installation location of Python 3 is in the users folder.
 So it will be installed somewhere like this:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Example:
 c:\Users\dlewis\AppData\Local\Programs\Python\Python36-32\python -m venv C:\David\Jup Tip: if you user name has a space in you are going to need to use the &amp;amp; and bracket. e.g.
-&amp;amp; (path with a space in) &amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description></item><item><title>Python_pc_setup_III</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iii/</link><pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed.
+&amp;amp; (path with a space in) &amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_III</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:30 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_iii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed.
 The default installation location of Python 3 is in the users folder.
 So it will be installed somewhere like this:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Example:
 c:\Users\dlewis\AppData\Local\Programs\Python\Python36-32\python -m venv C:\David\Jup Tip: if you user name has a space in you are going to need to use the &amp;amp; and bracket. e.g.
-&amp;amp; (path with a space in)
-&amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description></item><item><title>Python PC Setup II</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_ii/</link><pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_ii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+&amp;amp; (path with a space in)&amp;amp;(&amp;#34;C:\Users\David Lewis\AppData\Local\Programs\Python\Python36-32\python&amp;#34;) -m venv d:\fast\mypy\ds Start the virtual environment You might need to change the ExecutionPolicy in PowerShell to allow the scripts to run:</description>
+    </item>
+    
+    <item>
+      <title>Python PC Setup II</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_ii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup_ii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) The default installation location of Python is in the users folder. So it was installed in:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
-Install a Python virtual environment using venv The venv docs are here: https://docs.</description></item><item><title>Python_pc_setup_II</title><link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_ii/</link><pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_ii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was: Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
+Install a Python virtual environment using venv The venv docs are here: https://docs.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_II</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_ii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup_ii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was: Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
 The default installation location of Python is in the users folder. So it was installed in %USERPROFILE%\AppData\Local\Programs\Python\Python36-32
 See https://docs.python.org/3/using/windows.html for details.
-Install a Python virtual environment using venv The venv docs are here: https://docs.</description></item><item><title>Python_pc_setup_II</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_ii/</link><pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_ii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+Install a Python virtual environment using venv The venv docs are here: https://docs.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_II</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_ii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup_ii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) The default installation location of Python is in the users folder. So it was installed in:
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
-Install a Python virtual environment using venv The venv docs are here: https://docs.</description></item><item><title>Python_pc_setup_II</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_ii/</link><pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_ii/</guid><description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was: Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
+Install a Python virtual environment using venv The venv docs are here: https://docs.</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup_II</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_ii/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:22 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup_ii/</guid>
+      <description>Install the Python binary Install the Python binary you want to work with if not already installed. So for example the last binary I needed to install was the latest Python 3 for windows. The version was: Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
 The default installation location of Python is in the users folder. So it was installed in %USERPROFILE%\AppData\Local\Programs\Python\Python36-32
 See https://docs.python.org/3/using/windows.html for details.
-Install a Python virtual environment using venv The venv docs are here: https://docs.</description></item><item><title>Python PC Setup</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup/</link><pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup/</guid><description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+Install a Python virtual environment using venv The venv docs are here: https://docs.</description>
+    </item>
+    
+    <item>
+      <title>Python PC Setup</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_pc_setup/</guid>
+      <description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) The default installation location of Python is in the users folder. So it goes
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Set up a virtual environment Use venv:
-c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description></item><item><title>Python_pc_setup</title><link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup/</link><pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup/</guid><description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_pc_setup/</guid>
+      <description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
 The default installation location of Python is in the users folder. So it goes %USERPROFILE%\AppData\Local\Programs\Python\Python36-32
 See https://docs.python.org/3/using/windows.html for details.
 Set up a virtual environment Use venv:
-c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description></item><item><title>Python_pc_setup</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup/</link><pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup/</guid><description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_pc_setup/</guid>
+      <description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) The default installation location of Python is in the users folder. So it goes
 %USERPROFILE%\AppData\Local\Programs\Python\Python36-32 See https://docs.python.org/3/using/windows.html for details.
 Set up a virtual environment Use venv:
-c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description></item><item><title>Python_pc_setup</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup/</link><pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup/</guid><description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
+c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description>
+    </item>
+    
+    <item>
+      <title>Python_pc_setup</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup/</link>
+      <pubDate>Wed, 19 Oct 2022 11:05:10 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_pc_setup/</guid>
+      <description>Install the Python binary you want to work with So for example the last binary I needed to install was the latest Python 3 for windows. The version was:
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10).
 The default installation location of Python is in the users folder. So it goes %USERPROFILE%\AppData\Local\Programs\Python\Python36-32
 See https://docs.python.org/3/using/windows.html for details.
 Set up a virtual environment Use venv:
-c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description></item><item><title>Python Jupyter Cheatsheet</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_jupyter_cheatsheet/</link><pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_jupyter_cheatsheet/</guid><description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC D:\fast\mypy\dcldoc\Scripts\activate.ps1 D:\fast\mypy\ds\Scripts\activate.ps1 # Mac OSX source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser &amp;lt;http://localhost:8888/&amp;gt; Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description></item><item><title>Python_jupyter_cheatsheet</title><link>https://mrdavidlewis.github.io/notes/python/other/python_jupyter_cheatsheet/</link><pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_jupyter_cheatsheet/</guid><description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC
-D:\fast\mypy\dcldoc\Scripts\activate.ps1
-D:\fast\mypy\ds\Scripts\activate.ps1
-# Mac OSX
-source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser http://localhost:8888/ Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description></item><item><title>Python_jupyter_cheatsheet</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_jupyter_cheatsheet/</link><pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_jupyter_cheatsheet/</guid><description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC D:\fast\mypy\dcldoc\Scripts\activate.ps1 D:\fast\mypy\ds\Scripts\activate.ps1 # Mac OSX source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser &amp;lt;http://localhost:8888/&amp;gt; Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description></item><item><title>Python_jupyter_cheatsheet</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_jupyter_cheatsheet/</link><pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_jupyter_cheatsheet/</guid><description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC
-D:\fast\mypy\dcldoc\Scripts\activate.ps1
-D:\fast\mypy\ds\Scripts\activate.ps1
-# Mac OSX
-source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser http://localhost:8888/ Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description></item><item><title>Python Get Arguments</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_get_arguments/</link><pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_get_arguments/</guid><description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg)</description></item><item><title>Python_get_arguments</title><link>https://mrdavidlewis.github.io/notes/python/other/python_get_arguments/</link><pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_get_arguments/</guid><description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg)</description></item><item><title>Python_get_arguments</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_get_arguments/</link><pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_get_arguments/</guid><description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg)</description></item><item><title>Python_get_arguments</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_get_arguments/</link><pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_get_arguments/</guid><description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg)</description></item><item><title>Python Dictionaries</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_dict/</link><pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_dict/</guid><description>General advice: there is more than one way to do everything. Pick one style.
+c:\Python35\python -m venv c:\path\to\myenv If you have spaces and are working is PS:</description>
+    </item>
+    
+    <item>
+      <title>Python Jupyter Cheatsheet</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_jupyter_cheatsheet/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_jupyter_cheatsheet/</guid>
+      <description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC D:\fast\mypy\dcldoc\Scripts\activate.ps1 D:\fast\mypy\ds\Scripts\activate.ps1 # Mac OSX source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser &amp;lt;http://localhost:8888/&amp;gt; Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description>
+    </item>
+    
+    <item>
+      <title>Python_jupyter_cheatsheet</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_jupyter_cheatsheet/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_jupyter_cheatsheet/</guid>
+      <description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PCD:\fast\mypy\dcldoc\Scripts\activate.ps1D:\fast\mypy\ds\Scripts\activate.ps1# Mac OSXsource /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser http://localhost:8888/ Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description>
+    </item>
+    
+    <item>
+      <title>Python_jupyter_cheatsheet</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_jupyter_cheatsheet/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_jupyter_cheatsheet/</guid>
+      <description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PC D:\fast\mypy\dcldoc\Scripts\activate.ps1 D:\fast\mypy\ds\Scripts\activate.ps1 # Mac OSX source /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser &amp;lt;http://localhost:8888/&amp;gt; Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description>
+    </item>
+    
+    <item>
+      <title>Python_jupyter_cheatsheet</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_jupyter_cheatsheet/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:48 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_jupyter_cheatsheet/</guid>
+      <description>Quick start Start Powershell as admin or start bash Activate the Python venv that has jupyter installed # PCD:\fast\mypy\dcldoc\Scripts\activate.ps1D:\fast\mypy\ds\Scripts\activate.ps1# Mac OSXsource /Users/davidlewis/Documents/mypy/notebook/bin/activate Start Jupyter Notesbook server jupyter notebook The notebooks are available here from your browser http://localhost:8888/ Further documentation https://jupyter.readthedocs.io/en/latest/content-quickstart.html</description>
+    </item>
+    
+    <item>
+      <title>Python Get Arguments</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_get_arguments/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_get_arguments/</guid>
+      <description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg) </description>
+    </item>
+    
+    <item>
+      <title>Python_get_arguments</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_get_arguments/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_get_arguments/</guid>
+      <description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg) </description>
+    </item>
+    
+    <item>
+      <title>Python_get_arguments</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_get_arguments/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_get_arguments/</guid>
+      <description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg) </description>
+    </item>
+    
+    <item>
+      <title>Python_get_arguments</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_get_arguments/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:21 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_get_arguments/</guid>
+      <description>Get the arguments from the comand line from sys import argv thefile, first_arg, second_arg, third_arg = argv print (&amp;#34;The file is called:&amp;#34;, thefile) print (&amp;#34;Your first arg is:&amp;#34;, first_arg) print (&amp;#34;Your second arg is:&amp;#34;, second_arg) print (&amp;#34;Your third arg is:&amp;#34;, third_arg) </description>
+    </item>
+    
+    <item>
+      <title>Python Dictionaries</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_dict/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_dict/</guid>
+      <description>General advice: there is more than one way to do everything. Pick one style.
 # For examples I use this list l = [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;one&amp;#39;] The basics Make a new empty dictionary:
 d = dict() d = {} Add item to a dictionary:
 d[&amp;#39;a&amp;#39;] = 1 Get a value using a key:
 myval = d[&amp;#39;a&amp;#39;] Traverse keys:
-for key in d: print(key) Traverse keys and values:</description></item><item><title>Python Dictionaries</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_dict/</link><pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_dict/</guid><description>General advice: there is more than one way to do everything. Pick one style.
+for key in d: print(key) Traverse keys and values:</description>
+    </item>
+    
+    <item>
+      <title>Python Dictionaries</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_dict/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_dict/</guid>
+      <description>General advice: there is more than one way to do everything. Pick one style.
 # For examples I use this list l = [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;one&amp;#39;] The basics Make a new empty dictionary:
 d = dict() d = {} Add item to a dictionary:
 d[&amp;#39;a&amp;#39;] = 1 Get a value using a key:
 myval = d[&amp;#39;a&amp;#39;] Traverse keys:
-for key in d: print(key) Traverse keys and values:</description></item><item><title>Python_dict</title><link>https://mrdavidlewis.github.io/notes/python/other/python_dict/</link><pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_dict/</guid><description>General advice: there is more than one way to do everything. Pick one style.
+for key in d: print(key) Traverse keys and values:</description>
+    </item>
+    
+    <item>
+      <title>Python_dict</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_dict/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_dict/</guid>
+      <description>General advice: there is more than one way to do everything. Pick one style.
 # For examples I use this list l = [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;one&amp;#39;] The basics Make a new empty dictionary:
 d = dict() d = {} Add item to a dictionary:
 d[&amp;#39;a&amp;#39;] = 1 Get a value using a key:
 myval = d[&amp;#39;a&amp;#39;] Traverse keys:
-for key in d: print(key) Traverse keys and values:</description></item><item><title>Python_dict</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_dict/</link><pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_dict/</guid><description>General advice: there is more than one way to do everything. Pick one style.
+for key in d: print(key) Traverse keys and values:</description>
+    </item>
+    
+    <item>
+      <title>Python_dict</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_dict/</link>
+      <pubDate>Wed, 19 Oct 2022 11:04:09 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_dict/</guid>
+      <description>General advice: there is more than one way to do everything. Pick one style.
 # For examples I use this list l = [&amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;four&amp;#39;, &amp;#39;one&amp;#39;] The basics Make a new empty dictionary:
 d = dict() d = {} Add item to a dictionary:
 d[&amp;#39;a&amp;#39;] = 1 Get a value using a key:
 myval = d[&amp;#39;a&amp;#39;] Traverse keys:
-for key in d: print(key) Traverse keys and values:</description></item><item><title>Python Basic Arithmetic</title><link>https://mrdavidlewis.github.io/notes/python/basics/python_basic_arithmetic/</link><pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python_basic_arithmetic/</guid><description>Python arithmetic Addition 8 + 4 12
-8 + 1.0 9.0
-8 + 1 9
-8.0 + 1.0 9.0
-Substraction 8 - 4 4
-8 - 1.0 7.0
-8 - 1 7
-8.0 - 1.0 7.0
-Multiplication 8 * 4 32
-8 * 2.0 16.0
-8.0 * 2.0 16.0
-Division - floor 12 // 4 3
-12 // 5 2
-12.0 // 4.00 3.0
-12.0 // 5.00 2.0
-Division 12 / 4 3.</description></item><item><title>Python_basic_arithmetic</title><link>https://mrdavidlewis.github.io/notes/python/other/python_basic_arithmetic/</link><pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python_basic_arithmetic/</guid><description>Python arithmetic Addition 8 + 4 12
-8 + 1.0 9.0
-8 + 1 9
-8.0 + 1.0 9.0
-Substraction 8 - 4 4
-8 - 1.0 7.0
-8 - 1 7
-8.0 - 1.0 7.0
-Multiplication 8 * 4 32
-8 * 2.0 16.0
-8.0 * 2.0 16.0
-Division - floor 12 // 4 3
-12 // 5 2
-12.0 // 4.00 3.0
-12.0 // 5.00 2.0
-Division 12 / 4 3.</description></item><item><title>Python_basic_arithmetic</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python_basic_arithmetic/</link><pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python_basic_arithmetic/</guid><description>Python arithmetic Addition 8 + 4 12
-8 + 1.0 9.0
-8 + 1 9
-8.0 + 1.0 9.0
-Substraction 8 - 4 4
-8 - 1.0 7.0
-8 - 1 7
-8.0 - 1.0 7.0
-Multiplication 8 * 4 32
-8 * 2.0 16.0
-8.0 * 2.0 16.0
-Division - floor 12 // 4 3
-12 // 5 2
-12.0 // 4.00 3.0
-12.0 // 5.00 2.0
-Division 12 / 4 3.</description></item><item><title>Python_basic_arithmetic</title><link>https://mrdavidlewis.github.io/notes/sql/other/python_basic_arithmetic/</link><pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python_basic_arithmetic/</guid><description>Python arithmetic Addition 8 + 4 12
-8 + 1.0 9.0
-8 + 1 9
-8.0 + 1.0 9.0
-Substraction 8 - 4 4
-8 - 1.0 7.0
-8 - 1 7
-8.0 - 1.0 7.0
-Multiplication 8 * 4 32
-8 * 2.0 16.0
-8.0 * 2.0 16.0
-Division - floor 12 // 4 3
-12 // 5 2
-12.0 // 4.00 3.0
-12.0 // 5.00 2.0
-Division 12 / 4 3.</description></item><item><title>Python</title><link>https://mrdavidlewis.github.io/notes/python/basics/python/</link><pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/basics/python/</guid><description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description></item><item><title>Python</title><link>https://mrdavidlewis.github.io/notes/python/other/python/</link><pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/python/other/python/</guid><description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description></item><item><title>Python</title><link>https://mrdavidlewis.github.io/notes/sql/basics/python/</link><pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/basics/python/</guid><description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description></item><item><title>Python</title><link>https://mrdavidlewis.github.io/notes/sql/other/python/</link><pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/sql/other/python/</guid><description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description></item><item><title>Python a slightly longer title</title><link>https://mrdavidlewis.github.io/notes/other/basics/pythonxasasdas/</link><pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate><guid>https://mrdavidlewis.github.io/notes/other/basics/pythonxasasdas/</guid><description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description></item><item><title>About</title><link>https://mrdavidlewis.github.io/about/</link><pubDate>Mon, 17 Oct 2022 14:07:07 +0100</pubDate><guid>https://mrdavidlewis.github.io/about/</guid><description>Coming soon.</description></item><item><title>Test project page 1</title><link>https://mrdavidlewis.github.io/projects/test-project-page-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mrdavidlewis.github.io/projects/test-project-page-1/</guid><description>
+for key in d: print(key) Traverse keys and values:</description>
+    </item>
+    
+    <item>
+      <title>Python Basic Arithmetic</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python_basic_arithmetic/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python_basic_arithmetic/</guid>
+      <description>Python arithmetic Addition 8 + 4 128 + 1.0 9.08 + 1 98.0 + 1.0 9.0Substraction 8 - 4 48 - 1.0 7.08 - 1 78.0 - 1.0 7.0Multiplication 8 * 4 328 * 2.0 16.08.0 * 2.0 16.0Division - floor 12 // 4 312 // 5 212.0 // 4.00 3.012.0 // 5.00 2.0Division 12 / 4 3.</description>
+    </item>
+    
+    <item>
+      <title>Python_basic_arithmetic</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python_basic_arithmetic/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python_basic_arithmetic/</guid>
+      <description>Python arithmetic Addition 8 + 4 128 + 1.0 9.08 + 1 98.0 + 1.0 9.0Substraction 8 - 4 48 - 1.0 7.08 - 1 78.0 - 1.0 7.0Multiplication 8 * 4 328 * 2.0 16.08.0 * 2.0 16.0Division - floor 12 // 4 312 // 5 212.0 // 4.00 3.012.0 // 5.00 2.0Division 12 / 4 3.</description>
+    </item>
+    
+    <item>
+      <title>Python_basic_arithmetic</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python_basic_arithmetic/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python_basic_arithmetic/</guid>
+      <description>Python arithmetic Addition 8 + 4 128 + 1.0 9.08 + 1 98.0 + 1.0 9.0Substraction 8 - 4 48 - 1.0 7.08 - 1 78.0 - 1.0 7.0Multiplication 8 * 4 328 * 2.0 16.08.0 * 2.0 16.0Division - floor 12 // 4 312 // 5 212.0 // 4.00 3.012.0 // 5.00 2.0Division 12 / 4 3.</description>
+    </item>
+    
+    <item>
+      <title>Python_basic_arithmetic</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python_basic_arithmetic/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:52 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python_basic_arithmetic/</guid>
+      <description>Python arithmetic Addition 8 + 4 128 + 1.0 9.08 + 1 98.0 + 1.0 9.0Substraction 8 - 4 48 - 1.0 7.08 - 1 78.0 - 1.0 7.0Multiplication 8 * 4 328 * 2.0 16.08.0 * 2.0 16.0Division - floor 12 // 4 312 // 5 212.0 // 4.00 3.012.0 // 5.00 2.0Division 12 / 4 3.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://mrdavidlewis.github.io/notes/python/basics/python/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/basics/python/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://mrdavidlewis.github.io/notes/python/other/python/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/python/other/python/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/basics/python/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/basics/python/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://mrdavidlewis.github.io/notes/sql/other/python/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/sql/other/python/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+    <item>
+      <title>Python a slightly longer title</title>
+      <link>https://mrdavidlewis.github.io/notes/other/basics/pythonxasasdas/</link>
+      <pubDate>Wed, 19 Oct 2022 11:03:04 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/other/basics/pythonxasasdas/</guid>
+      <description># This is to count the number of lines of text files # in a named folder. # The following extension qualify a file to be counted: # tab, txt, csv, py import os def file_len(fname): i=-1 with open(fname) as f: for i, l in enumerate(f): pass return i + 1 allowed = [&amp;#39;.tab&amp;#39;, &amp;#39;.txt&amp;#39;, &amp;#39;.csv&amp;#39;, &amp;#39;.py&amp;#39;] # this is where you name the folder you want to search folderName = &amp;#39;Z:\\Documents\\Python&amp;#39; os.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://mrdavidlewis.github.io/about/</link>
+      <pubDate>Mon, 17 Oct 2022 14:07:07 +0100</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/about/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Test project page 1</title>
+      <link>https://mrdavidlewis.github.io/projects/test-project-page-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/projects/test-project-page-1/</guid>
+      <description>
 Description&amp;hellip;
-Tech used item item item</description></item><item><title>Test project page 2</title><link>https://mrdavidlewis.github.io/projects/test-project-page-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mrdavidlewis.github.io/projects/test-project-page-2/</guid><description>
+Tech used item item item </description>
+    </item>
+    
+    <item>
+      <title>Test project page 2</title>
+      <link>https://mrdavidlewis.github.io/projects/test-project-page-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/projects/test-project-page-2/</guid>
+      <description>
 Description&amp;hellip;
-Tech used item item item</description></item></channel></rss>
+Tech used item item item </description>
+    </item>
+    
+  </channel>
+</rss>

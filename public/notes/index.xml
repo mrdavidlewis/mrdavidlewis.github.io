@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DeeKayBee</title><link>https://mrdavidlewis.github.io/notes/</link><description>Recent content on DeeKayBee</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><lastBuildDate>Thu, 03 Nov 2022 10:17:21 +0000</lastBuildDate><atom:link href="https://mrdavidlewis.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS Typography</title><link>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</link><pubDate>Thu, 03 Nov 2022 10:17:21 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</guid><description>Typography This is an example:
-h1 { font-size: 3rem; }</description></item><item><title>CSS Selectors</title><link>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</link><pubDate>Wed, 02 Nov 2022 16:03:24 +0000</pubDate><guid>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</guid><description>Element selector: h1 { font-size: 4rem; } ID selector: #main { color: red; } Class selector: .nav { background-color: blue; } Compound selectors Match all h1 elements with a class of front-page
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeeKayBee</title>
+    <link>https://mrdavidlewis.github.io/notes/</link>
+    <description>Recent content on DeeKayBee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Thu, 03 Nov 2022 10:17:21 +0000</lastBuildDate><atom:link href="https://mrdavidlewis.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Typography</title>
+      <link>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</link>
+      <pubDate>Thu, 03 Nov 2022 10:17:21 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/css/basics/css_typography/</guid>
+      <description>Typography This is an example:
+h1 { font-size: 3rem; } </description>
+    </item>
+    
+    <item>
+      <title>CSS Selectors</title>
+      <link>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</link>
+      <pubDate>Wed, 02 Nov 2022 16:03:24 +0000</pubDate>
+      
+      <guid>https://mrdavidlewis.github.io/notes/css/basics/css_selectors/</guid>
+      <description>Element selector: h1 { font-size: 4rem; } ID selector: #main { color: red; } Class selector: .nav { background-color: blue; } Compound selectors Match all h1 elements with a class of front-page
 h1.front-page { letter-spacing: 0.05rem; } Match all h1 elements with a class of both front-page and head-line
-h1.front-page.head-line { line-spacing: 1rem; } Descendant combinator The space makes it a descendant combinator. This matched all right-side elements that are direct or indirect descandent of the left-side.</description></item></channel></rss>
+h1.front-page.head-line { line-spacing: 1rem; } Descendant combinator The space makes it a descendant combinator. This matched all right-side elements that are direct or indirect descandent of the left-side.</description>
+    </item>
+    
+  </channel>
+</rss>
