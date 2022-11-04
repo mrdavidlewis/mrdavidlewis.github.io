@@ -2,7 +2,10 @@
     <ul>
 
       {{ $x := .File.Path }}
+
       {{ $x = replace $x "\\" "," }}
+
+      {{ $x = replace $x "/" "," }}
 
       {{ if eq $x  "_index.md" }}
       <li><a class="active" href="/">Home</a></li>
@@ -23,4 +26,4 @@
       {{ end }}
 
     </ul>
-  </div>
+</div>
