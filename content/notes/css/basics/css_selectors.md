@@ -37,4 +37,26 @@ Match all ```h1``` elements with a class of both ```front-page``` and ```head-li
 ```css
 h1.front-page.head-line {
   line-spacing: 1rem;
-} 
+}
+```
+
+### Descendant combinator
+
+- The space makes it a _descendant combinator_.
+- This matched all right-side elements that are direct or indirect descandent of the left-side.
+- In this case all ```li``` element that are with a ```.nav``` class element are matched
+
+```css
+.nav li {
+    background-color: blue;
+}
+```
+
+### Child combinator
+- Similar to descendant for directly descendant
+
+```css
+.nav > li {
+    background-color: blue;
+}
+```

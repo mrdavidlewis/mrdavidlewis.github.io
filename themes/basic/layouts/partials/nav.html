@@ -1,5 +1,26 @@
-<nav>
-  <a href="/">Home</a>
-  <a href="/projects">Projects</a>
-  <a href="/about">About</a>
-</nav>
+<div id="topmenu">
+    <ul>
+
+      {{ $x := .File.Path }}
+      {{ $x = replace $x "\\" "," }}
+
+      {{ if eq $x  "_index.md" }}
+      <li><a class="active" href="/">Home</a></li>
+      {{ else }}
+      <li><a href="/">Home</a></li>
+      {{ end }}
+
+      {{ if eq $x "projects,_index.md" }}
+      <li><a class="active" href="/projects">Projects</a></li>
+      {{ else }}
+      <li><a href="/projects">Projects</a></li>
+      {{ end }}
+
+      {{ if eq $x  "about.md" }}
+      <li><a class="active" href="/about">About</a></li>
+      {{ else }}
+      <li><a href="/about">About</a></li>
+      {{ end }}
+
+    </ul>
+  </div>
